@@ -1,0 +1,2251 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+                              build/RFM69.o (pow)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (__ieee754_pow)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o) (__ieee754_sqrt)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o) (fabs)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (finite)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (__fdlib_version)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o) (nan)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (rint)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o) (scalbn)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (__errno)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o) (_impure_ptr)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+                              build/main.o (memset)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+                              build/main.o (sprintf)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o) (_svfprintf_r)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o) (_printf_i)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o) (_realloc_r)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o) (_free_r)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o) (_malloc_r)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o) (memchr)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o) (memcpy)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o) (memmove)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o) (__malloc_lock)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o) (_sbrk_r)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o) (errno)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+                              build/helper.o (__udivdi3)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+                              build/RFM69.o (__divsf3)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+                              build/RFM69.o (__fixunssfsi)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+                              build/RFM69.o (__floatunsisf)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o) (__adddf3)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+                              build/RFM69.o (__divdf3)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (__eqdf2)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o) (__gedf2)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (__ltdf2)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+                              build/RFM69.o (__muldf3)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o) (__subdf3)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o) (__unorddf2)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+                              build/RFM69.o (__fixunsdfsi)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+                              build/RFM69.o (__floatsidf)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o) (__clz_tab)
+/usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o) (__clzsi2)
+/usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+                              /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o) (sbrk)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 build/main.o
+ .data          0x0000000000000000        0x0 build/main.o
+ .bss           0x0000000000000000        0x0 build/main.o
+ .pdr           0x0000000000000000       0x80 build/main.o
+ .rodata.rssiSniffer.str1.4
+                0x0000000000000000       0x35 build/main.o
+ .text.rssiSniffer
+                0x0000000000000000      0x148 build/main.o
+ .text          0x0000000000000000        0x0 build/interrupt.o
+ .data          0x0000000000000000        0x0 build/interrupt.o
+ .bss           0x0000000000000000        0x0 build/interrupt.o
+ .reginfo       0x0000000000000000       0x18 build/interrupt.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/interrupt.o
+ .pdr           0x0000000000000000       0x80 build/interrupt.o
+ .text.__DoNothingTlbException
+                0x0000000000000000       0x30 build/interrupt.o
+ .text.__DoNothingCacheException
+                0x0000000000000000       0x30 build/interrupt.o
+ .text          0x0000000000000000        0x0 build/UARTDrv.o
+ .data          0x0000000000000000        0x0 build/UARTDrv.o
+ .bss           0x0000000000000000        0x0 build/UARTDrv.o
+ .reginfo       0x0000000000000000       0x18 build/UARTDrv.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/UARTDrv.o
+ .pdr           0x0000000000000000       0x80 build/UARTDrv.o
+ .text.UARTDrv_GetCount
+                0x0000000000000000        0xc build/UARTDrv.o
+ .text          0x0000000000000000        0x0 build/helper.o
+ .data          0x0000000000000000        0x0 build/helper.o
+ .bss           0x0000000000000000        0x0 build/helper.o
+ .reginfo       0x0000000000000000       0x18 build/helper.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/helper.o
+ .pdr           0x0000000000000000       0x40 build/helper.o
+ .text          0x0000000000000000        0x0 build/system.o
+ .data          0x0000000000000000        0x0 build/system.o
+ .bss           0x0000000000000000        0x0 build/system.o
+ .reginfo       0x0000000000000000       0x18 build/system.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/system.o
+ .pdr           0x0000000000000000      0x260 build/system.o
+ .text.SystemLock
+                0x0000000000000000       0x18 build/system.o
+ .text.SystemReset
+                0x0000000000000000       0x2c build/system.o
+ .text.SystemSleep
+                0x0000000000000000       0x38 build/system.o
+ .text.SystemIdle
+                0x0000000000000000       0x38 build/system.o
+ .text.GetSystemClock
+                0x0000000000000000       0x24 build/system.o
+ .text.SystemSetSystemClock
+                0x0000000000000000       0x3c build/system.o
+ .text.SystemSetPeripheralClock
+                0x0000000000000000       0x3c build/system.o
+ .text.GetCP0Count
+                0x0000000000000000        0x8 build/system.o
+ .text.SetCP0Count
+                0x0000000000000000        0x8 build/system.o
+ .sdata.pbDivsCount
+                0x0000000000000000        0x1 build/system.o
+ .sdata.pllMulsCount
+                0x0000000000000000        0x1 build/system.o
+ .sdata.pllOutputDivsCount
+                0x0000000000000000        0x1 build/system.o
+ .sdata.pllInputDivsCount
+                0x0000000000000000        0x1 build/system.o
+ .text          0x0000000000000000        0x0 build/SPIDrv.o
+ .data          0x0000000000000000        0x0 build/SPIDrv.o
+ .bss           0x0000000000000000        0x0 build/SPIDrv.o
+ .reginfo       0x0000000000000000       0x18 build/SPIDrv.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/SPIDrv.o
+ .pdr           0x0000000000000000       0x60 build/SPIDrv.o
+ .text          0x0000000000000000        0x0 build/GPIODrv.o
+ .data          0x0000000000000000        0x0 build/GPIODrv.o
+ .bss           0x0000000000000000        0x0 build/GPIODrv.o
+ .reginfo       0x0000000000000000       0x18 build/GPIODrv.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/GPIODrv.o
+ .pdr           0x0000000000000000        0x0 build/GPIODrv.o
+ .comment       0x0000000000000000       0x13 build/GPIODrv.o
+ .text          0x0000000000000000        0x0 build/BTN.o
+ .data          0x0000000000000000        0x0 build/BTN.o
+ .bss           0x0000000000000000        0x0 build/BTN.o
+ .reginfo       0x0000000000000000       0x18 build/BTN.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/BTN.o
+ .pdr           0x0000000000000000       0x60 build/BTN.o
+ .text.BTN_update
+                0x0000000000000000        0x8 build/BTN.o
+ .text          0x0000000000000000        0x0 build/COMMS.o
+ .data          0x0000000000000000        0x0 build/COMMS.o
+ .bss           0x0000000000000000        0x0 build/COMMS.o
+ .reginfo       0x0000000000000000       0x18 build/COMMS.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/COMMS.o
+ .pdr           0x0000000000000000        0x0 build/COMMS.o
+ .comment       0x0000000000000000       0x13 build/COMMS.o
+ .text          0x0000000000000000        0x0 build/LED.o
+ .data          0x0000000000000000        0x0 build/LED.o
+ .bss           0x0000000000000000        0x0 build/LED.o
+ .reginfo       0x0000000000000000       0x18 build/LED.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/LED.o
+ .pdr           0x0000000000000000       0x60 build/LED.o
+ .text.LED_toggle
+                0x0000000000000000       0x14 build/LED.o
+ .text          0x0000000000000000        0x0 build/RFM69.o
+ .data          0x0000000000000000        0x0 build/RFM69.o
+ .bss           0x0000000000000000        0x0 build/RFM69.o
+ .reginfo       0x0000000000000000       0x18 build/RFM69.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/RFM69.o
+ .pdr           0x0000000000000000      0x200 build/RFM69.o
+ .text.RFM69_setReset
+                0x0000000000000000       0x2c build/RFM69.o
+ .text.RFM69_GetTemp
+                0x0000000000000000       0x98 build/RFM69.o
+ .text.RFM69_SetOverCurrentProtection
+                0x0000000000000000       0x70 build/RFM69.o
+ .text.RFM69_SetLNA
+                0x0000000000000000       0x2c build/RFM69.o
+ .sbss.sanityLength
+                0x0000000000000000        0x2 build/RFM69.o
+ .bss.sanityBuffer
+                0x0000000000000000       0x80 build/RFM69.o
+ .text          0x0000000000000000        0x0 build/processor.o
+ .data          0x0000000000000000        0x0 build/processor.o
+ .bss           0x0000000000000000        0x0 build/processor.o
+ .reginfo       0x0000000000000000       0x18 build/processor.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/processor.o
+ .pdr           0x0000000000000000        0x0 build/processor.o
+ .text          0x0000000000000000        0x0 /tmp/cczRijVl.o
+ .data          0x0000000000000000        0x0 /tmp/cczRijVl.o
+ .bss           0x0000000000000000        0x0 /tmp/cczRijVl.o
+ .reginfo       0x0000000000000000       0x18 /tmp/cczRijVl.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /tmp/cczRijVl.o
+ .pdr           0x0000000000000000       0xa0 /tmp/cczRijVl.o
+ .text          0x0000000000000000        0x0 /tmp/ccwb0chm.o
+ .data          0x0000000000000000        0x0 /tmp/ccwb0chm.o
+ .bss           0x0000000000000000        0x0 /tmp/ccwb0chm.o
+ .reginfo       0x0000000000000000       0x18 /tmp/ccwb0chm.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /tmp/ccwb0chm.o
+ .pdr           0x0000000000000000       0x20 /tmp/ccwb0chm.o
+ .text          0x0000000000000000        0x0 /tmp/ccCgy6Jk.o
+ .data          0x0000000000000000        0x0 /tmp/ccCgy6Jk.o
+ .bss           0x0000000000000000        0x0 /tmp/ccCgy6Jk.o
+ .reginfo       0x0000000000000000       0x18 /tmp/ccCgy6Jk.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /tmp/ccCgy6Jk.o
+ .pdr           0x0000000000000000        0x0 /tmp/ccCgy6Jk.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .pdr           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .pdr           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .pdr           0x0000000000000000       0x40 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .pdr           0x0000000000000000       0x60 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .pdr           0x0000000000000000       0x40 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .pdr           0x0000000000000000       0x40 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .pdr           0x0000000000000000       0x40 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000      0x18c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .pdr           0x0000000000000000       0x40 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .pdr           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+ .reginfo       0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+ .pdr           0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+ .text          0x0000000000000000        0x0 build/processor.o
+ .data          0x0000000000000000        0x0 build/processor.o
+ .bss           0x0000000000000000        0x0 build/processor.o
+ .reginfo       0x0000000000000000       0x18 build/processor.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 build/processor.o
+ .pdr           0x0000000000000000        0x0 build/processor.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+kseg0_program_mem 0x000000009d000000 0x000000000003f000 xr
+exception_mem    0x000000009d03f000 0x0000000000001000
+debug_exec_mem   0x000000009fc00490 0x0000000000000760
+kseg0_boot_mem   0x000000009fc00490 0x0000000000000000
+kseg1_boot_mem   0x00000000bfc00000 0x0000000000000490
+config3          0x00000000bfc00bf0 0x0000000000000004
+config2          0x00000000bfc00bf4 0x0000000000000004
+config1          0x00000000bfc00bf8 0x0000000000000004
+config0          0x00000000bfc00bfc 0x0000000000000004
+kseg1_data_mem   0x00000000a0000000 0x0000000000010000 w !x
+sfrs             0x00000000bf800000 0x0000000000100000
+configsfrs       0x00000000bfc00bf0 0x0000000000000010
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000000800                _min_heap_size = 0x800
+LOAD build/main.o
+LOAD build/interrupt.o
+LOAD build/UARTDrv.o
+LOAD build/helper.o
+LOAD build/system.o
+LOAD build/SPIDrv.o
+LOAD build/GPIODrv.o
+LOAD build/BTN.o
+LOAD build/COMMS.o
+LOAD build/LED.o
+LOAD build/RFM69.o
+LOAD build/processor.o
+LOAD /tmp/cczRijVl.o
+LOAD /tmp/ccwb0chm.o
+LOAD /tmp/ccCgy6Jk.o
+LOAD /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a
+LOAD /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a
+LOAD /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a
+LOAD /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a
+LOAD build/processor.o
+                0x0000000000000001                PROVIDE (_vector_spacing = 0x1)
+                0x000000009d03f000                PROVIDE (_ebase_address = 0x9d03f000)
+                0x00000000bfc00000                _RESET_ADDR = 0xbfc00000
+                0x00000000bfc00380                _BEV_EXCPT_ADDR = 0xbfc00380
+                0x00000000bfc00480                _DBG_EXCPT_ADDR = 0xbfc00480
+                0x000000009fc00490                _DBG_CODE_ADDR = 0x9fc00490
+                0x0000000000000760                _DBG_CODE_SIZE = 0x760
+                0x000000009d03f180                _GEN_EXCPT_ADDR = (_ebase_address + 0x180)
+
+.config_BFC00BF0
+                0x00000000bfc00bf0        0x4
+ *(.config_BFC00BF0)
+ *(.SECTION_DEVCFG3)
+ .SECTION_DEVCFG3
+                0x00000000bfc00bf0        0x4 build/main.o
+                0x00000000bfc00bf0                temp3
+
+.config_BFC00BF4
+                0x00000000bfc00bf4        0x4
+ *(.config_BFC00BF4)
+ *(.SECTION_DEVCFG2)
+ .SECTION_DEVCFG2
+                0x00000000bfc00bf4        0x4 build/main.o
+                0x00000000bfc00bf4                temp2
+
+.config_BFC00BF8
+                0x00000000bfc00bf8        0x4
+ *(.config_BFC00BF8)
+ *(.SECTION_DEVCFG1)
+ .SECTION_DEVCFG1
+                0x00000000bfc00bf8        0x4 build/main.o
+                0x00000000bfc00bf8                temp1
+
+.config_BFC00BFC
+                0x00000000bfc00bfc        0x4
+ *(.config_BFC00BFC)
+ *(.SECTION_DEVCFG0)
+ .SECTION_DEVCFG0
+                0x00000000bfc00bfc        0x4 build/main.o
+                0x00000000bfc00bfc                temp0
+                0x0000000000000400                PROVIDE (_min_stack_size = 0x400)
+                [!provide]                        PROVIDE (_min_heap_size = 0x200)
+                0x0000000000000000                PROVIDE (_ramfunc_begin = 0x0)
+                0x0000000000008000                PROVIDE (_bmxdkpba_address = 0x8000)
+
+.reset          0x00000000bfc00000      0x198
+ *(.reset)
+ .reset         0x00000000bfc00000        0x8 /tmp/cczRijVl.o
+                0x00000000bfc00000                _reset
+ *(.reset.startup)
+ .reset.startup
+                0x00000000bfc00008      0x190 /tmp/cczRijVl.o
+
+.bev_excpt      0x00000000bfc00380        0x4
+ *(.bev_handler)
+ .bev_handler   0x00000000bfc00380        0x4 /tmp/cczRijVl.o
+
+.dbg_excpt      0x00000000bfc00480        0x0
+                0x00000000bfc00480                . = (. + DEFINED (_DEBUGGER)?0x8:0x0)
+
+.dbg_code       0x000000009fc00490        0x0
+                0x000000009fc00490                . = (. + DEFINED (_DEBUGGER)?_DBG_CODE_SIZE:0x0)
+
+.app_excpt      0x000000009d03f180       0x20
+ *(.gen_handler)
+ .gen_handler   0x000000009d03f180       0x20 /tmp/cczRijVl.o
+
+.vector_0       0x000000009d03f200        0xc
+ *(.vector_0)
+ .vector_0      0x000000009d03f200        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_0) <= (_vector_spacing << 0x5))), function at exception vector 0 too large)
+
+.vector_1       0x000000009d03f220        0xc
+ *(.vector_1)
+ .vector_1      0x000000009d03f220        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_1) <= (_vector_spacing << 0x5))), function at exception vector 1 too large)
+
+.vector_2       0x000000009d03f240        0xc
+ *(.vector_2)
+ .vector_2      0x000000009d03f240        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_2) <= (_vector_spacing << 0x5))), function at exception vector 2 too large)
+
+.vector_3       0x000000009d03f260        0xc
+ *(.vector_3)
+ .vector_3      0x000000009d03f260        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_3) <= (_vector_spacing << 0x5))), function at exception vector 3 too large)
+
+.vector_4       0x000000009d03f280        0xc
+ *(.vector_4)
+ .vector_4      0x000000009d03f280        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_4) <= (_vector_spacing << 0x5))), function at exception vector 4 too large)
+
+.vector_5       0x000000009d03f2a0        0xc
+ *(.vector_5)
+ .vector_5      0x000000009d03f2a0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_5) <= (_vector_spacing << 0x5))), function at exception vector 5 too large)
+
+.vector_6       0x000000009d03f2c0        0xc
+ *(.vector_6)
+ .vector_6      0x000000009d03f2c0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_6) <= (_vector_spacing << 0x5))), function at exception vector 6 too large)
+
+.vector_7       0x000000009d03f2e0        0xc
+ *(.vector_7)
+ .vector_7      0x000000009d03f2e0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_7) <= (_vector_spacing << 0x5))), function at exception vector 7 too large)
+
+.vector_8       0x000000009d03f300        0xc
+ *(.vector_8)
+ .vector_8      0x000000009d03f300        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_8) <= (_vector_spacing << 0x5))), function at exception vector 8 too large)
+
+.vector_9       0x000000009d03f320        0xc
+ *(.vector_9)
+ .vector_9      0x000000009d03f320        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_9) <= (_vector_spacing << 0x5))), function at exception vector 9 too large)
+
+.vector_10      0x000000009d03f340        0xc
+ *(.vector_10)
+ .vector_10     0x000000009d03f340        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_10) <= (_vector_spacing << 0x5))), function at exception vector 10 too large)
+
+.vector_11      0x000000009d03f360        0xc
+ *(.vector_11)
+ .vector_11     0x000000009d03f360        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_11) <= (_vector_spacing << 0x5))), function at exception vector 11 too large)
+
+.vector_12      0x000000009d03f380        0xc
+ *(.vector_12)
+ .vector_12     0x000000009d03f380        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_12) <= (_vector_spacing << 0x5))), function at exception vector 12 too large)
+
+.vector_13      0x000000009d03f3a0        0xc
+ *(.vector_13)
+ .vector_13     0x000000009d03f3a0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_13) <= (_vector_spacing << 0x5))), function at exception vector 13 too large)
+
+.vector_14      0x000000009d03f3c0        0xc
+ *(.vector_14)
+ .vector_14     0x000000009d03f3c0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_14) <= (_vector_spacing << 0x5))), function at exception vector 14 too large)
+
+.vector_15      0x000000009d03f3e0        0xc
+ *(.vector_15)
+ .vector_15     0x000000009d03f3e0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_15) <= (_vector_spacing << 0x5))), function at exception vector 15 too large)
+
+.vector_16      0x000000009d03f400        0xc
+ *(.vector_16)
+ .vector_16     0x000000009d03f400        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_16) <= (_vector_spacing << 0x5))), function at exception vector 16 too large)
+
+.vector_17      0x000000009d03f420        0xc
+ *(.vector_17)
+ .vector_17     0x000000009d03f420        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_17) <= (_vector_spacing << 0x5))), function at exception vector 17 too large)
+
+.vector_18      0x000000009d03f440        0xc
+ *(.vector_18)
+ .vector_18     0x000000009d03f440        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_18) <= (_vector_spacing << 0x5))), function at exception vector 18 too large)
+
+.vector_19      0x000000009d03f460        0xc
+ *(.vector_19)
+ .vector_19     0x000000009d03f460        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_19) <= (_vector_spacing << 0x5))), function at exception vector 19 too large)
+
+.vector_20      0x000000009d03f480        0xc
+ *(.vector_20)
+ .vector_20     0x000000009d03f480        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_20) <= (_vector_spacing << 0x5))), function at exception vector 20 too large)
+
+.vector_21      0x000000009d03f4a0        0xc
+ *(.vector_21)
+ .vector_21     0x000000009d03f4a0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_21) <= (_vector_spacing << 0x5))), function at exception vector 21 too large)
+
+.vector_22      0x000000009d03f4c0        0xc
+ *(.vector_22)
+ .vector_22     0x000000009d03f4c0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_22) <= (_vector_spacing << 0x5))), function at exception vector 22 too large)
+
+.vector_23      0x000000009d03f4e0        0xc
+ *(.vector_23)
+ .vector_23     0x000000009d03f4e0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_23) <= (_vector_spacing << 0x5))), function at exception vector 23 too large)
+
+.vector_24      0x000000009d03f500        0xc
+ *(.vector_24)
+ .vector_24     0x000000009d03f500        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_24) <= (_vector_spacing << 0x5))), function at exception vector 24 too large)
+
+.vector_25      0x000000009d03f520        0xc
+ *(.vector_25)
+ .vector_25     0x000000009d03f520        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_25) <= (_vector_spacing << 0x5))), function at exception vector 25 too large)
+
+.vector_26      0x000000009d03f540        0xc
+ *(.vector_26)
+ .vector_26     0x000000009d03f540        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_26) <= (_vector_spacing << 0x5))), function at exception vector 26 too large)
+
+.vector_27      0x000000009d03f560        0xc
+ *(.vector_27)
+ .vector_27     0x000000009d03f560        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_27) <= (_vector_spacing << 0x5))), function at exception vector 27 too large)
+
+.vector_28      0x000000009d03f580        0xc
+ *(.vector_28)
+ .vector_28     0x000000009d03f580        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_28) <= (_vector_spacing << 0x5))), function at exception vector 28 too large)
+
+.vector_29      0x000000009d03f5a0        0xc
+ *(.vector_29)
+ .vector_29     0x000000009d03f5a0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_29) <= (_vector_spacing << 0x5))), function at exception vector 29 too large)
+
+.vector_30      0x000000009d03f5c0        0xc
+ *(.vector_30)
+ .vector_30     0x000000009d03f5c0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_30) <= (_vector_spacing << 0x5))), function at exception vector 30 too large)
+
+.vector_31      0x000000009d03f5e0        0xc
+ *(.vector_31)
+ .vector_31     0x000000009d03f5e0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_31) <= (_vector_spacing << 0x5))), function at exception vector 31 too large)
+
+.vector_32      0x000000009d03f600        0xc
+ *(.vector_32)
+ .vector_32     0x000000009d03f600        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_32) <= (_vector_spacing << 0x5))), function at exception vector 32 too large)
+
+.vector_33      0x000000009d03f620        0xc
+ *(.vector_33)
+ .vector_33     0x000000009d03f620        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_33) <= (_vector_spacing << 0x5))), function at exception vector 33 too large)
+
+.vector_34      0x000000009d03f640        0xc
+ *(.vector_34)
+ .vector_34     0x000000009d03f640        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_34) <= (_vector_spacing << 0x5))), function at exception vector 34 too large)
+
+.vector_35      0x000000009d03f660        0xc
+ *(.vector_35)
+ .vector_35     0x000000009d03f660        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_35) <= (_vector_spacing << 0x5))), function at exception vector 35 too large)
+
+.vector_36      0x000000009d03f680        0xc
+ *(.vector_36)
+ .vector_36     0x000000009d03f680        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_36) <= (_vector_spacing << 0x5))), function at exception vector 36 too large)
+
+.vector_37      0x000000009d03f6a0        0xc
+ *(.vector_37)
+ .vector_37     0x000000009d03f6a0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_37) <= (_vector_spacing << 0x5))), function at exception vector 37 too large)
+
+.vector_38      0x000000009d03f6c0        0xc
+ *(.vector_38)
+ .vector_38     0x000000009d03f6c0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_38) <= (_vector_spacing << 0x5))), function at exception vector 38 too large)
+
+.vector_39      0x000000009d03f6e0        0xc
+ *(.vector_39)
+ .vector_39     0x000000009d03f6e0        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_39) <= (_vector_spacing << 0x5))), function at exception vector 39 too large)
+
+.vector_40      0x000000009d03f700        0xc
+ *(.vector_40)
+ .vector_40     0x000000009d03f700        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_40) <= (_vector_spacing << 0x5))), function at exception vector 40 too large)
+
+.vector_41      0x000000009d03f720        0xc
+ *(.vector_41)
+ .vector_41     0x000000009d03f720        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_41) <= (_vector_spacing << 0x5))), function at exception vector 41 too large)
+
+.vector_42      0x000000009d03f740        0xc
+ *(.vector_42)
+ .vector_42     0x000000009d03f740        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_42) <= (_vector_spacing << 0x5))), function at exception vector 42 too large)
+
+.vector_43      0x000000009d03f760        0xc
+ *(.vector_43)
+ .vector_43     0x000000009d03f760        0xc /tmp/ccCgy6Jk.o
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_43) <= (_vector_spacing << 0x5))), function at exception vector 43 too large)
+
+.vector_44      0x000000009d03f780        0x0
+ *(.vector_44)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_44) <= (_vector_spacing << 0x5))), function at exception vector 44 too large)
+
+.vector_45      0x000000009d03f7a0        0x0
+ *(.vector_45)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_45) <= (_vector_spacing << 0x5))), function at exception vector 45 too large)
+
+.vector_46      0x000000009d03f7c0        0x0
+ *(.vector_46)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_46) <= (_vector_spacing << 0x5))), function at exception vector 46 too large)
+
+.vector_47      0x000000009d03f7e0        0x0
+ *(.vector_47)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_47) <= (_vector_spacing << 0x5))), function at exception vector 47 too large)
+
+.vector_48      0x000000009d03f800        0x0
+ *(.vector_48)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_48) <= (_vector_spacing << 0x5))), function at exception vector 48 too large)
+
+.vector_49      0x000000009d03f820        0x0
+ *(.vector_49)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_49) <= (_vector_spacing << 0x5))), function at exception vector 49 too large)
+
+.vector_50      0x000000009d03f840        0x0
+ *(.vector_50)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_50) <= (_vector_spacing << 0x5))), function at exception vector 50 too large)
+
+.vector_51      0x000000009d03f860        0x0
+ *(.vector_51)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_51) <= (_vector_spacing << 0x5))), function at exception vector 51 too large)
+
+.vector_52      0x000000009d03f880        0x0
+ *(.vector_52)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_52) <= (_vector_spacing << 0x5))), function at exception vector 52 too large)
+
+.vector_53      0x000000009d03f8a0        0x0
+ *(.vector_53)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_53) <= (_vector_spacing << 0x5))), function at exception vector 53 too large)
+
+.vector_54      0x000000009d03f8c0        0x0
+ *(.vector_54)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_54) <= (_vector_spacing << 0x5))), function at exception vector 54 too large)
+
+.vector_55      0x000000009d03f8e0        0x0
+ *(.vector_55)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_55) <= (_vector_spacing << 0x5))), function at exception vector 55 too large)
+
+.vector_56      0x000000009d03f900        0x0
+ *(.vector_56)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_56) <= (_vector_spacing << 0x5))), function at exception vector 56 too large)
+
+.vector_57      0x000000009d03f920        0x0
+ *(.vector_57)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_57) <= (_vector_spacing << 0x5))), function at exception vector 57 too large)
+
+.vector_58      0x000000009d03f940        0x0
+ *(.vector_58)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_58) <= (_vector_spacing << 0x5))), function at exception vector 58 too large)
+
+.vector_59      0x000000009d03f960        0x0
+ *(.vector_59)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_59) <= (_vector_spacing << 0x5))), function at exception vector 59 too large)
+
+.vector_60      0x000000009d03f980        0x0
+ *(.vector_60)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_60) <= (_vector_spacing << 0x5))), function at exception vector 60 too large)
+
+.vector_61      0x000000009d03f9a0        0x0
+ *(.vector_61)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_61) <= (_vector_spacing << 0x5))), function at exception vector 61 too large)
+
+.vector_62      0x000000009d03f9c0        0x0
+ *(.vector_62)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_62) <= (_vector_spacing << 0x5))), function at exception vector 62 too large)
+
+.vector_63      0x000000009d03f9e0        0x0
+ *(.vector_63)
+                0x0000000000000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_63) <= (_vector_spacing << 0x5))), function at exception vector 63 too large)
+
+.startup
+ *(.startup)
+
+.text           0x000000009d000000     0x6dec
+ *(.stub .gnu.linkonce.t.*)
+ *(.text.*personality*)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+ *(.gnu.warning)
+                0x000000009d000000                . = ALIGN (0x4)
+ .text          0x000000009d000000      0x27c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+                0x000000009d000000                pow
+ .text          0x000000009d00027c     0x114c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+                0x000000009d00027c                __ieee754_pow
+ .text          0x000000009d0013c8      0x26c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+                0x000000009d0013c8                __ieee754_sqrt
+ .text          0x000000009d001634       0x14 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+                0x000000009d001634                fabs
+ .text          0x000000009d001648       0x1c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+                0x000000009d001648                finite
+ .text          0x000000009d001664       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+                0x000000009d001664                nan
+ .text          0x000000009d001674      0x214 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+                0x000000009d001674                rint
+ .text          0x000000009d001888      0x178 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+                0x000000009d001888                scalbn
+ .text          0x000000009d001a00        0xc /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+                0x000000009d001a00                __errno
+ .text          0x000000009d001a0c      0x11c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+                0x000000009d001a0c                memset
+ .text          0x000000009d001b28       0xc4 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+                0x000000009d001b28                _siprintf_r
+                0x000000009d001b28                _sprintf_r
+                0x000000009d001b84                sprintf
+                0x000000009d001b84                siprintf
+ .text          0x000000009d001bec      0x784 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+                0x000000009d001bec                __ssputs_r
+                0x000000009d001d8c                __ssprint_r
+                0x000000009d001f8c                _svfprintf_r
+                0x000000009d001f8c                _svfiprintf_r
+ .text          0x000000009d002370      0x604 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+                0x000000009d002370                _printf_common
+                0x000000009d00255c                _printf_i
+ .text          0x000000009d002974      0x680 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+                0x000000009d002974                _realloc_r
+ .text          0x000000009d002ff4      0x3d8 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+                0x000000009d002ff4                _malloc_trim_r
+                0x000000009d003118                _free_r
+ .text          0x000000009d0033cc      0x740 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+                0x000000009d0033cc                _malloc_r
+ .text          0x000000009d003b0c       0x38 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+                0x000000009d003b0c                memchr
+ .text          0x000000009d003b44      0x370 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+                0x000000009d003b44                memcpy
+ .text          0x000000009d003eb4       0x68 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+                0x000000009d003eb4                memmove
+ .text          0x000000009d003f1c       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+                0x000000009d003f1c                __malloc_lock
+                0x000000009d003f24                __malloc_unlock
+ .text          0x000000009d003f2c       0x4c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+                0x000000009d003f2c                _sbrk_r
+ .text          0x000000009d003f78      0x514 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+                0x000000009d003f78                __udivdi3
+ .text          0x000000009d00448c      0x3e0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+                0x000000009d00448c                __divsf3
+ .text          0x000000009d00486c       0x74 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+                0x000000009d00486c                __fixunssfsi
+ .text          0x000000009d0048e0       0xf8 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+                0x000000009d0048e0                __floatunsisf
+ .text          0x000000009d0049d8      0x8c4 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+                0x000000009d0049d8                __adddf3
+ .text          0x000000009d00529c      0x79c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+                0x000000009d00529c                __divdf3
+ .text          0x000000009d005a38       0xa0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+                0x000000009d005a38                __eqdf2
+                0x000000009d005a38                __nedf2
+ .text          0x000000009d005ad8      0x134 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+                0x000000009d005ad8                __gtdf2
+                0x000000009d005ad8                __gedf2
+ .text          0x000000009d005c0c      0x134 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+                0x000000009d005c0c                __ltdf2
+                0x000000009d005c0c                __ledf2
+ .text          0x000000009d005d40      0x574 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+                0x000000009d005d40                __muldf3
+ .text          0x000000009d0062b4      0x904 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+                0x000000009d0062b4                __subdf3
+ .text          0x000000009d006bb8       0x50 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+                0x000000009d006bb8                __unorddf2
+ .text          0x000000009d006c08       0x84 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+                0x000000009d006c08                __fixunsdfsi
+ .text          0x000000009d006c8c       0xdc /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+                0x000000009d006c8c                __floatsidf
+ .text          0x000000009d006d68       0x58 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+                0x000000009d006d68                __clzsi2
+ .text          0x000000009d006dc0       0x2c /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+                0x000000009d006dc0                sbrk
+
+.text.setup     0x000000009d006dec       0x7c
+ .text.setup    0x000000009d006dec       0x7c build/main.o
+                0x000000009d006dec                setup
+
+.text.tryCapture
+                0x000000009d006e68      0x324
+ .text.tryCapture
+                0x000000009d006e68      0x324 build/main.o
+                0x000000009d006e68                tryCapture
+
+.text.main      0x000000009d00718c      0x1fc
+ .text.main     0x000000009d00718c      0x1fc build/main.o
+                0x000000009d00718c                main
+
+.text.__DoNothing
+                0x000000009d007388       0x48
+ .text.__DoNothing
+                0x000000009d007388       0x48 build/interrupt.o
+                0x000000009d007388                ETHInterrupt
+                0x000000009d007388                Comparator3Interrupt
+                0x000000009d007388                External0Interrupt
+                0x000000009d007388                UART5RxInterrupt
+                0x000000009d007388                UART1FaultInterrupt
+                0x000000009d007388                ADCData39Interrupt
+                0x000000009d007388                UART1TxInterrupt
+                0x000000009d007388                UART6_UART2B_SharedInterrupt
+                0x000000009d007388                ADCData17Interrupt
+                0x000000009d007388                UART3ErrorInterrupt
+                0x000000009d007388                ADCData12Interrupt
+                0x000000009d007388                ADCData19Interrupt
+                0x000000009d007388                I2C1MasterInterrupt
+                0x000000009d007388                ADCDF5Interrupt
+                0x000000009d007388                ADCData43Interrupt
+                0x000000009d007388                ADCData8Interrupt
+                0x000000009d007388                UART5_UART3B_SharedInterrupt
+                0x000000009d007388                CCT7Interrupt
+                0x000000009d007388                CCP4Interrupt
+                0x000000009d007388                CCT1Interrupt
+                0x000000009d007388                I2C5_SPI4_UART2_SharedInterrupt
+                0x000000009d007388                InputCapture6ErrorInterrupt
+                0x000000009d007388                SPI1FaultInterrupt
+                0x000000009d007388                ADCData40Interrupt
+                0x000000009d007388                External2Interrupt
+                0x000000009d007388                CoreSoftware0Interrupt
+                0x000000009d007388                InputCapture9Interrupt
+                0x000000009d007388                UART2RxInterrupt
+                0x000000009d007388                CAN2Interrupt
+                0x000000009d007388                ADCData5Interrupt
+                0x000000009d007388                ADCData34Interrupt
+                0x000000009d007388                InputCapture4Interrupt
+                0x000000009d007388                ADCDF1Interrupt
+                0x000000009d007388                SPI5RxInterrupt
+                0x000000009d007388                CCP5Interrupt
+                0x000000009d007388                CCT2Interrupt
+                0x000000009d007388                ADC1WARMInterrupt
+                0x000000009d007388                CCP7Interrupt
+                0x000000009d007388                CCT4Interrupt
+                0x000000009d007388                ChangeNoticeKInterrupt
+                0x000000009d007388                ADCDF6Interrupt
+                0x000000009d007388                I2C1SlaveInterrupt
+                0x000000009d007388                ADCInterrupt
+                0x000000009d007388                CCP6Interrupt
+                0x000000009d007388                CCT3Interrupt
+                0x000000009d007388                Timer9Interrupt
+                0x000000009d007388                ADCDC3Interrupt
+                0x000000009d007388                CCT8Interrupt
+                0x000000009d007388                ADCData28Interrupt
+                0x000000009d007388                UART2ErrorInterrupt
+                0x000000009d007388                HLVDInterrupt
+                0x000000009d007388                DMA3Interrupt
+                0x000000009d007388                I2C2SlaveInterrupt
+                0x000000009d007388                UART3FaultInterrupt
+                0x000000009d007388                ADCData26Interrupt
+                0x000000009d007388                External4Interrupt
+                0x000000009d007388                I2C3BusInterrupt
+                0x000000009d007388                DMA2Interrupt
+                0x000000009d007388                CLC1Interrupt
+                0x000000009d007388                SPI1Interrupt
+                0x000000009d007388                ADCDC2Interrupt
+                0x000000009d007388                ADCData32Interrupt
+                0x000000009d007388                InputCapture3ErrorInterrupt
+                0x000000009d007388                PMPInterrupt
+                0x000000009d007388                UART4RxInterrupt
+                0x000000009d007388                ADCData33Interrupt
+                0x000000009d007388                SystemBusProtectionInterrupt
+                0x000000009d007388                ADC0WARMInterrupt
+                0x000000009d007388                I2C5MasterInterrupt
+                0x000000009d007388                ADCData0Interrupt
+                0x000000009d007388                UART3Interrupt
+                0x000000009d007388                SPI2RxInterrupt
+                0x000000009d007388                ChangeNoticeInterrupt
+                0x000000009d007388                ADCDC5Interrupt
+                0x000000009d007388                USBDMAInterrupt
+                0x000000009d007388                UART4TxInterrupt
+                0x000000009d007388                SPI6TxInterrupt
+                0x000000009d007388                I2C4MasterInterrupt
+                0x000000009d007388                InputCapture2ErrorInterrupt
+                0x000000009d007388                InputCapture7ErrorInterrupt
+                0x000000009d007388                RTCCInterrupt
+                0x000000009d007388                ADCDC6Interrupt
+                0x000000009d007388                ADCData23Interrupt
+                0x000000009d007388                InputCapture1Interrupt
+                0x000000009d007388                SPI4TxInterrupt
+                0x000000009d007388                PrefetchInterrupt
+                0x000000009d007388                CCP2Interrupt
+                0x000000009d007388                ADCData6Interrupt
+                0x000000009d007388                SPI1TxInterrupt
+                0x000000009d007388                Timer8Interrupt
+                0x000000009d007388                ADCData35Interrupt
+                0x000000009d007388                CoreSoftware1Interrupt
+                0x000000009d007388                SPI4RxInterrupt
+                0x000000009d007388                ChangeNoticeJInterrupt
+                0x000000009d007388                ADCData27Interrupt
+                0x000000009d007388                UART1Interrupt
+                0x000000009d007388                ADCData16Interrupt
+                0x000000009d007388                SPI3ErrorInterrupt
+                0x000000009d007388                UART5TxInterrupt
+                0x000000009d007388                I2C2MasterInterrupt
+                0x000000009d007388                UART2FaultInterrupt
+                0x000000009d007388                UART4_UART1B_SharedInterrupt
+                0x000000009d007388                ADCData44Interrupt
+                0x000000009d007388                ADCData24Interrupt
+                0x000000009d007388                ADCEARLYInterrupt
+                0x000000009d007388                ADC4EARLYInterrupt
+                0x000000009d007388                ADCData11Interrupt
+                0x000000009d007388                SPI5FaultInterrupt
+                0x000000009d007388                UART3TxInterrupt
+                0x000000009d007388                ADCData38Interrupt
+                0x000000009d007388                ADCData1Interrupt
+                0x000000009d007388                I2C3_SPI3_UART1_SharedInterrupt
+                0x000000009d007388                FlashControlInterrupt
+                0x000000009d007388                ADCDF3Interrupt
+                0x000000009d007388                Comparator1Interrupt
+                0x000000009d007388                ADCDC4Interrupt
+                0x000000009d007388                ADCData21Interrupt
+                0x000000009d007388                I2C3SlaveInterrupt
+                0x000000009d007388                Timer7Interrupt
+                0x000000009d007388                OutputCompare1Interrupt
+                0x000000009d007388                CryptoInterrupt
+                0x000000009d007388                OutputCompare4Interrupt
+                0x000000009d007388                I2C4BusInterrupt
+                0x000000009d007388                I2C4_SPI2_UART3_SharedInterrupt
+                0x000000009d007388                NVMInterrupt
+                0x000000009d007388                OutputCompare3Interrupt
+                0x000000009d007388                External1Interrupt
+                0x000000009d007388                ADC0EARLYInterrupt
+                0x000000009d007388                CCP3Interrupt
+                0x000000009d007388                ADC7EARLYInterrupt
+                0x000000009d007388                SPI2FaultInterrupt
+                0x000000009d007388                ADCFaultInterrupt
+                0x000000009d007388                ADCData9Interrupt
+                0x000000009d007388                InputCapture9ErrorInterrupt
+                0x000000009d007388                ADCData41Interrupt
+                0x000000009d007388                OutputCompare2Interrupt
+                0x000000009d007388                I2C3MasterInterrupt
+                0x000000009d007388                DCOTuneInterrupt
+                0x000000009d007388                ADCData7Interrupt
+                0x000000009d007388                ADC2EARLYInterrupt
+                0x000000009d007388                ADCData15Interrupt
+                0x000000009d007388                ADC7WARMInterrupt
+                0x000000009d007388                I2C2BusInterrupt
+                0x000000009d007388                SPI5TxInterrupt
+                0x000000009d007388                Timer1Interrupt
+                0x000000009d007388                Timer4Interrupt
+                0x000000009d007388                DMA1Interrupt
+                0x000000009d007388                __DoNothing
+                0x000000009d007388                SPI3FaultInterrupt
+                0x000000009d007388                Timer2Interrupt
+                0x000000009d007388                I2C4SlaveInterrupt
+                0x000000009d007388                SPI1ErrorInterrupt
+                0x000000009d007388                InputCapture5ErrorInterrupt
+                0x000000009d007388                USB1Interrupt
+                0x000000009d007388                ADCFIFOInterrupt
+                0x000000009d007388                ChangeNoticeCInterrupt
+                0x000000009d007388                ChangeNoticeEInterrupt
+                0x000000009d007388                ADCData18Interrupt
+                0x000000009d007388                UART1RxInterrupt
+                0x000000009d007388                Timer6Interrupt
+                0x000000009d007388                ADCData14Interrupt
+                0x000000009d007388                OutputCompare8Interrupt
+                0x000000009d007388                I2C1Interrupt
+                0x000000009d007388                CLC2Interrupt
+                0x000000009d007388                SPI2Interrupt
+                0x000000009d007388                DMA5Interrupt
+                0x000000009d007388                ADCURDYInterrupt
+                0x000000009d007388                CoreTimerInterrupt
+                0x000000009d007388                I2C1BusInterrupt
+                0x000000009d007388                UART4Interrupt
+                0x000000009d007388                ADCData10Interrupt
+                0x000000009d007388                SPI6FaultInterrupt
+                0x000000009d007388                ADCData37Interrupt
+                0x000000009d007388                CCT9Interrupt
+                0x000000009d007388                InputCapture8Interrupt
+                0x000000009d007388                ADCData29Interrupt
+                0x000000009d007388                OutputCompare5Interrupt
+                0x000000009d007388                InputCapture6Interrupt
+                0x000000009d007388                UART6RxInterrupt
+                0x000000009d007388                UART5FaultInterrupt
+                0x000000009d007388                ADC4WARMInterrupt
+                0x000000009d007388                ChangeNoticeHInterrupt
+                0x000000009d007388                SPI6RxInterrupt
+                0x000000009d007388                InputCapture5Interrupt
+                0x000000009d007388                ADCData20Interrupt
+                0x000000009d007388                I2C5BusInterrupt
+                0x000000009d007388                InputCapture4ErrorInterrupt
+                0x000000009d007388                Comparator2Interrupt
+                0x000000009d007388                UART2TxInterrupt
+                0x000000009d007388                ADCData31Interrupt
+                0x000000009d007388                I2C5SlaveInterrupt
+                0x000000009d007388                DMA0Interrupt
+                0x000000009d007388                InputCapture1ErrorInterrupt
+                0x000000009d007388                PerformanceCounterInterrupt
+                0x000000009d007388                InputCapture2Interrupt
+                0x000000009d007388                DMA7Interrupt
+                0x000000009d007388                ChangeNoticeDInterrupt
+                0x000000009d007388                ADCData42Interrupt
+                0x000000009d007388                ADCData13Interrupt
+                0x000000009d007388                FRCTuneInterrupt
+                0x000000009d007388                UART1ErrorInterrupt
+                0x000000009d007388                FastDebugChannelInterrupt
+                0x000000009d007388                OutputCompare9Interrupt
+                0x000000009d007388                ChangeNoticeBInterrupt
+                0x000000009d007388                ETHERNETInterrupt
+                0x000000009d007388                ADCDF2Interrupt
+                0x000000009d007388                ADCARDYInterrupt
+                0x000000009d007388                ADC1EARLYInterrupt
+                0x000000009d007388                CAN1Interrupt
+                0x000000009d007388                ECCSingleBitErrorInterrupt
+                0x000000009d007388                SPI4FaultInterrupt
+                0x000000009d007388                ADCData36Interrupt
+                0x000000009d007388                ADCDF4Interrupt
+                0x000000009d007388                ADCData4Interrupt
+                0x000000009d007388                CTMUInterrupt
+                0x000000009d007388                CLC3Interrupt
+                0x000000009d007388                SPI3Interrupt
+                0x000000009d007388                FCEInterrupt
+                0x000000009d007388                ADCData22Interrupt
+                0x000000009d007388                ADC2WARMInterrupt
+                0x000000009d007388                I2C2Interrupt
+                0x000000009d007388                OutputCompare7Interrupt
+                0x000000009d007388                ChangeNoticeFInterrupt
+                0x000000009d007388                ADCData25Interrupt
+                0x000000009d007388                ADC3EARLYInterrupt
+                0x000000009d007388                ADC3WARMInterrupt
+                0x000000009d007388                CCP8Interrupt
+                0x000000009d007388                CCT5Interrupt
+                0x000000009d007388                SPI3TxInterrupt
+                0x000000009d007388                UART6FaultInterrupt
+                0x000000009d007388                UART5Interrupt
+                0x000000009d007388                UART3RxInterrupt
+                0x000000009d007388                CCP1Interrupt
+                0x000000009d007388                UART6TxInterrupt
+                0x000000009d007388                ADCEOSInterrupt
+                0x000000009d007388                ADCData3Interrupt
+                0x000000009d007388                SPI2ErrorInterrupt
+                0x000000009d007388                SPI3RxInterrupt
+                0x000000009d007388                USBInterrupt
+                0x000000009d007388                CCP9Interrupt
+                0x000000009d007388                CCT6Interrupt
+                0x000000009d007388                DMA6Interrupt
+                0x000000009d007388                ChangeNoticeGInterrupt
+                0x000000009d007388                ADCData2Interrupt
+                0x000000009d007388                ADCDC1Interrupt
+                0x000000009d007388                InputCapture8ErrorInterrupt
+                0x000000009d007388                DMA4Interrupt
+                0x000000009d007388                CRCInterrupt
+                0x000000009d007388                FailSafeMonitorInterrupt
+                0x000000009d007388                SPI2TxInterrupt
+                0x000000009d007388                PMPErrorInterrupt
+                0x000000009d007388                InputCapture3Interrupt
+                0x000000009d007388                External3Interrupt
+                0x000000009d007388                UART4FaultInterrupt
+                0x000000009d007388                InputCapture7Interrupt
+                0x000000009d007388                CLC4Interrupt
+                0x000000009d007388                SPI4Interrupt
+                0x000000009d007388                ChangeNoticeAInterrupt
+                0x000000009d007388                Timer5Interrupt
+                0x000000009d007388                Timer3Interrupt
+                0x000000009d007388                SQI1Interrupt
+                0x000000009d007388                SPI1RxInterrupt
+                0x000000009d007388                ADCData30Interrupt
+                0x000000009d007388                OutputCompare6Interrupt
+
+.text.__DoNothingGenException
+                0x000000009d0073d0       0x30
+ .text.__DoNothingGenException
+                0x000000009d0073d0       0x30 build/interrupt.o
+                0x000000009d0073d0                __DoNothingGenException
+                0x000000009d0073d0                _general_exception_handler
+
+.text.UART2Interrupt
+                0x000000009d007400       0x80
+ .text.UART2Interrupt
+                0x000000009d007400       0x80 build/UARTDrv.o
+                0x000000009d007400                UART2Interrupt
+
+.text.UARTDrv_Init
+                0x000000009d007480      0x208
+ .text.UARTDrv_Init
+                0x000000009d007480      0x208 build/UARTDrv.o
+                0x000000009d007480                UARTDrv_Init
+
+.text.UARTDrv_SendBlocking
+                0x000000009d007688       0x8c
+ .text.UARTDrv_SendBlocking
+                0x000000009d007688       0x8c build/UARTDrv.o
+                0x000000009d007688                UARTDrv_SendBlocking
+
+.text.delayus   0x000000009d007714       0x4c
+ .text.delayus  0x000000009d007714       0x4c build/helper.o
+                0x000000009d007714                delayus
+
+.text.delayms   0x000000009d007760       0x48
+ .text.delayms  0x000000009d007760       0x48 build/helper.o
+                0x000000009d007760                delayms
+
+.text.SystemUnlock
+                0x000000009d0077a8       0x28
+ .text.SystemUnlock
+                0x000000009d0077a8       0x28 build/system.o
+                0x000000009d0077a8                SystemUnlock
+
+.text.SystemClocksReadSettings
+                0x000000009d0077d0       0x3c
+ .text.SystemClocksReadSettings
+                0x000000009d0077d0       0x3c build/system.o
+                0x000000009d0077d0                SystemClocksReadSettings
+
+.text.SystemClocksGetCpuFrequency
+                0x000000009d00780c       0x70
+ .text.SystemClocksGetCpuFrequency
+                0x000000009d00780c       0x70 build/system.o
+                0x000000009d00780c                SystemClocksGetCpuFrequency
+
+.text.SystemClocksGetPeripheralFrequency
+                0x000000009d00787c       0x48
+ .text.SystemClocksGetPeripheralFrequency
+                0x000000009d00787c       0x48 build/system.o
+                0x000000009d00787c                SystemClocksGetPeripheralFrequency
+
+.text.SystemClocksCalcCpuClockSettings
+                0x000000009d0078c4       0xa0
+ .text.SystemClocksCalcCpuClockSettings
+                0x000000009d0078c4       0xa0 build/system.o
+                0x000000009d0078c4                SystemClocksCalcCpuClockSettings
+
+.text.SystemClocksCalcPeripheralClockSettings
+                0x000000009d007964       0x80
+ .text.SystemClocksCalcPeripheralClockSettings
+                0x000000009d007964       0x80 build/system.o
+                0x000000009d007964                SystemClocksCalcPeripheralClockSettings
+
+.text.SystemClocksWriteSettings
+                0x000000009d0079e4       0xb4
+ .text.SystemClocksWriteSettings
+                0x000000009d0079e4       0xb4 build/system.o
+                0x000000009d0079e4                SystemClocksWriteSettings
+
+.text.GetPeripheralClock
+                0x000000009d007a98       0x24
+ .text.GetPeripheralClock
+                0x000000009d007a98       0x24 build/system.o
+                0x000000009d007a98                GetPeripheralClock
+
+.text.SystemConfig
+                0x000000009d007abc       0x5c
+ .text.SystemConfig
+                0x000000009d007abc       0x5c build/system.o
+                0x000000009d007abc                SystemConfig
+
+.text.INTEnableSystemMultiVectoredInt
+                0x000000009d007b18       0x24
+ .text.INTEnableSystemMultiVectoredInt
+                0x000000009d007b18       0x24 build/system.o
+                0x000000009d007b18                INTEnableSystemMultiVectoredInt
+
+.text.SPIDrv_Init
+                0x000000009d007b3c      0x2ec
+ .text.SPIDrv_Init
+                0x000000009d007b3c      0x2ec build/SPIDrv.o
+                0x000000009d007b3c                SPIDrv_Init
+
+.text.SPIDrv_SendBlocking
+                0x000000009d007e28       0x58
+ .text.SPIDrv_SendBlocking
+                0x000000009d007e28       0x58 build/SPIDrv.o
+                0x000000009d007e28                SPIDrv_SendBlocking
+
+.text.SPIDrv_SendReceiveBlocking
+                0x000000009d007e80       0x4c
+ .text.SPIDrv_SendReceiveBlocking
+                0x000000009d007e80       0x4c build/SPIDrv.o
+                0x000000009d007e80                SPIDrv_SendReceiveBlocking
+
+.text.BTN_init  0x000000009d007ecc       0x2c
+ .text.BTN_init
+                0x000000009d007ecc       0x2c build/BTN.o
+                0x000000009d007ecc                BTN_init
+
+.text.BTN_getStatus
+                0x000000009d007ef8       0x14
+ .text.BTN_getStatus
+                0x000000009d007ef8       0x14 build/BTN.o
+                0x000000009d007ef8                BTN_getStatus
+
+.text.LED_init  0x000000009d007f0c       0x18
+ .text.LED_init
+                0x000000009d007f0c       0x18 build/LED.o
+                0x000000009d007f0c                LED_init
+
+.text.LED_setState
+                0x000000009d007f24       0x34
+ .text.LED_setState
+                0x000000009d007f24       0x34 build/LED.o
+                0x000000009d007f24                LED_setState
+
+.text.RFM69_SetReg
+                0x000000009d007f58       0x4c
+ .text.RFM69_SetReg
+                0x000000009d007f58       0x4c build/RFM69.o
+                0x000000009d007f58                RFM69_SetReg
+
+.text.RFM69_ReadReg
+                0x000000009d007fa4       0x50
+ .text.RFM69_ReadReg
+                0x000000009d007fa4       0x50 build/RFM69.o
+                0x000000009d007fa4                RFM69_ReadReg
+
+.text.RFM69_GetRevision
+                0x000000009d007ff4       0x38
+ .text.RFM69_GetRevision
+                0x000000009d007ff4       0x38 build/RFM69.o
+                0x000000009d007ff4                RFM69_GetRevision
+
+.text.RFM69_SetBitrate
+                0x000000009d00802c       0x48
+ .text.RFM69_SetBitrate
+                0x000000009d00802c       0x48 build/RFM69.o
+                0x000000009d00802c                RFM69_SetBitrate
+
+.text.RFM69_SetFreqDeviation
+                0x000000009d008074       0x50
+ .text.RFM69_SetFreqDeviation
+                0x000000009d008074       0x50 build/RFM69.o
+                0x000000009d008074                RFM69_SetFreqDeviation
+
+.text.RFM69_SetRfCarrierFreq
+                0x000000009d0080c4       0x5c
+ .text.RFM69_SetRfCarrierFreq
+                0x000000009d0080c4       0x5c build/RFM69.o
+                0x000000009d0080c4                RFM69_SetRfCarrierFreq
+
+.text.RFM69_SetOutputPower
+                0x000000009d008120       0x64
+ .text.RFM69_SetOutputPower
+                0x000000009d008120       0x64 build/RFM69.o
+                0x000000009d008120                RFM69_SetOutputPower
+
+.text.RFM69_SetRxBw
+                0x000000009d008184      0x168
+ .text.RFM69_SetRxBw
+                0x000000009d008184      0x168 build/RFM69.o
+                0x000000009d008184                RFM69_SetRxBw
+
+.text.RFM69_GetRSSI
+                0x000000009d0082ec       0x4c
+ .text.RFM69_GetRSSI
+                0x000000009d0082ec       0x4c build/RFM69.o
+                0x000000009d0082ec                RFM69_GetRSSI
+
+.text.RFM69_SetDioMapping
+                0x000000009d008338      0x110
+ .text.RFM69_SetDioMapping
+                0x000000009d008338      0x110 build/RFM69.o
+                0x000000009d008338                RFM69_SetDioMapping
+
+.text.RFM69_SetCLKOUT
+                0x000000009d008448       0x44
+ .text.RFM69_SetCLKOUT
+                0x000000009d008448       0x44 build/RFM69.o
+                0x000000009d008448                RFM69_SetCLKOUT
+
+.text.RFM69_Init
+                0x000000009d00848c       0xdc
+ .text.RFM69_Init
+                0x000000009d00848c       0xdc build/RFM69.o
+                0x000000009d00848c                RFM69_Init
+
+.text.main_entry
+                0x000000009d008568       0x38
+ .text.main_entry
+                0x000000009d008568       0x38 /tmp/cczRijVl.o
+                0x000000009d008580                __crt0_exit
+
+.text.general_exception
+                0x000000009d0085a0       0xdc
+ .text.general_exception
+                0x000000009d0085a0       0xdc /tmp/ccwb0chm.o
+                0x000000009d0085a0                _general_exception_context
+
+.init           0x000000009d00867c        0x0
+ *crti.o(.init)
+ *crtbegin.o(.init)
+ *(EXCLUDE_FILE(*crtn.o *crtend?.o *crtend.o) .init)
+ *crtend.o(.init)
+ *crtn.o(.init)
+                0x000000009d00867c                . = ALIGN (0x4)
+
+.fini           0x000000009d00867c        0x0
+ *(.fini)
+                0x000000009d00867c                . = ALIGN (0x4)
+
+.preinit_array  0x000000009d00867c        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+                0x000000009d00867c                . = ALIGN (0x4)
+
+.init_array     0x000000009d00867c        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+                0x000000009d00867c                . = ALIGN (0x4)
+
+.fini_array     0x000000009d00867c        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x000000009d00867c                . = ALIGN (0x4)
+
+.ctors          0x000000009d00867c        0x0
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+                0x000000009d00867c                . = ALIGN (0x4)
+
+.dtors          0x000000009d00867c        0x0
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+                0x000000009d00867c                . = ALIGN (0x4)
+
+.rodata         0x000000009d008680      0x24c
+ *(.gnu.linkonce.r.*)
+ *(.rodata1)
+                0x000000009d008680                . = ALIGN (0x4)
+ .rodata        0x000000009d008680       0x30 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .rodata        0x000000009d0086b0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .rodata        0x000000009d0086c0       0x58 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .rodata        0x000000009d008718       0x3c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .rodata        0x000000009d008754       0x3c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .rodata        0x000000009d008790       0x3c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .rodata        0x000000009d0087cc      0x100 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+                0x000000009d0087cc                __clz_tab
+
+.MIPS.abiflags  0x000000009d0088d0       0x18
+ .MIPS.abiflags
+                0x000000009d0088d0       0x18 build/main.o
+
+.rodata.tryCapture.str1.4
+                0x000000009d0088e8       0x9b
+ .rodata.tryCapture.str1.4
+                0x000000009d0088e8       0x9b build/main.o
+
+.rodata.main.str1.4
+                0x000000009d008984       0xba
+ .rodata.main.str1.4
+                0x000000009d008984       0xba build/main.o
+
+.rodata.pbDivs  0x000000009d008a40       0x10
+ .rodata.pbDivs
+                0x000000009d008a40       0x10 build/system.o
+                0x000000009d008a40                pbDivs
+
+.rodata.pllMuls
+                0x000000009d008a50       0x20
+ .rodata.pllMuls
+                0x000000009d008a50       0x20 build/system.o
+                0x000000009d008a50                pllMuls
+
+.rodata.pllOutputDivs
+                0x000000009d008a70       0x20
+ .rodata.pllOutputDivs
+                0x000000009d008a70       0x20 build/system.o
+                0x000000009d008a70                pllOutputDivs
+
+.rodata.pllInputDivs
+                0x000000009d008a90       0x20
+ .rodata.pllInputDivs
+                0x000000009d008a90       0x20 build/system.o
+                0x000000009d008a90                pllInputDivs
+
+.rodata.str1.4  0x000000009d008ab0       0x39
+ .rodata.str1.4
+                0x000000009d008ab0        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+                                          0x1 (size before relaxing)
+ .rodata.str1.4
+                0x000000009d008ab0       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ *fill*         0x000000009d008ac3        0x1 
+ .rodata.str1.4
+                0x000000009d008ac4       0x25 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+
+.sdata2         0x000000009d008aec        0x0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000000009d008aec                . = ALIGN (0x4)
+
+.sbss2          0x000000009d008aec        0x0
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+                0x000000009d008aec                . = ALIGN (0x4)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+                0x000000009d008aec                . = ALIGN (0x4)
+
+.eh_frame       0x000000009d008aec       0x28
+ *(.eh_frame)
+ .eh_frame      0x000000009d008aec       0x28 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+                0x000000009d008b14                . = ALIGN (0x4)
+
+.gcc_except_table
+                0x000000009d008b14        0x0
+ *(.gcc_except_table .gcc_except_table.*)
+                0x000000009d008b14                _gcc_except_table_end = .
+                0x000000009d008b14                . = ALIGN (0x4)
+
+.dbg_data       0x00000000a0000000        0x0
+                0x00000000a0000000                . = (. + DEFINED (_DEBUGGER)?0x200:0x0)
+
+.jcr            0x00000000a0000000        0x0
+ *(.jcr)
+                0x00000000a0000000                . = ALIGN (0x4)
+
+.eh_frame
+ *(.eh_frame)
+                0x00000000a0000000                . = ALIGN (0x4)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x00000000a0000000                . = ALIGN (0x4)
+
+.persist        0x00000000a0000000        0x0
+                0x00000000a0000000                _persist_begin = .
+ *(.persist .persist.*)
+ *(.pbss .pbss.*)
+                0x00000000a0000000                . = ALIGN (0x4)
+                0x00000000a0000000                _persist_end = .
+                0x000000009d008b14                _startupInitData = LOADADDR (.data)
+
+.data           0x00000000a0000000      0x830 load address 0x000000009d008b14
+                0x00000000a0000000                _data_begin = .
+ *(.gnu.linkonce.d.*)
+ *(.data1)
+                0x00000000a0000000                . = ALIGN (0x4)
+                0x00000000a00009a8                _data_end = .
+ .data          0x00000000a0000000      0x428 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .data          0x00000000a0000428      0x408 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+                0x00000000a0000428                __malloc_av_
+                0x00000000a0000830                . = .
+                0x00000000a0008820                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got            0x00000000a0000830        0x0 load address 0x000000009d009344
+ *(.got.plt)
+ *(.got)
+                0x00000000a0000830                . = ALIGN (0x4)
+
+.sdata          0x00000000a0000830      0x178 load address 0x000000009d009344
+                0x00000000a0000830                _sdata_begin = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00000000a0000830       0x18 build/RFM69.o
+ .sdata         0x00000000a0000848       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .sdata         0x00000000a0000860       0xf8 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .sdata         0x00000000a0000958        0x4 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+                0x00000000a0000958                __fdlib_version
+ *fill*         0x00000000a000095c        0x4 
+ .sdata         0x00000000a0000960        0x8 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .sdata         0x00000000a0000968       0x30 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .sdata         0x00000000a0000998        0x8 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+                0x00000000a0000998                _global_impure_ptr
+                0x00000000a000099c                _impure_ptr
+ .sdata         0x00000000a00009a0        0x8 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+                0x00000000a00009a0                __malloc_sbrk_base
+                0x00000000a00009a4                __malloc_trim_threshold
+                0x00000000a00009a8                . = ALIGN (0x4)
+                0x00000000a00009a8                _sdata_end = .
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0x00000000a00009a8                . = ALIGN (0x4)
+                0x00000000a00009a8                _data_end = .
+                0x00000000a00009a8                _bss_begin = .
+
+.sbss           0x00000000a00009a8       0x28
+                0x00000000a00009a8                _sbss_begin = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss.retBuffer
+                0x00000000a00009a8        0x8 build/main.o
+                0x00000000a00009a8                retBuffer
+ .sbss.lengthArray
+                0x00000000a00009b0        0x4 build/main.o
+                0x00000000a00009b0                lengthArray
+ .sbss.temp     0x00000000a00009b4        0x1 build/UARTDrv.o
+                0x00000000a00009b4                temp
+ *fill*         0x00000000a00009b5        0x3 
+ .sbss.count    0x00000000a00009b8        0x4 build/UARTDrv.o
+                0x00000000a00009b8                count
+ .sbss          0x00000000a00009bc        0xc /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+                0x00000000a00009bc                __malloc_max_total_mem
+                0x00000000a00009c0                __malloc_max_sbrked_mem
+                0x00000000a00009c4                __malloc_top_pad
+ .sbss          0x00000000a00009c8        0x4 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+                0x00000000a00009c8                errno
+ .sbss          0x00000000a00009cc        0x4 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+ *(.scommon)
+                0x00000000a00009d0                _sbss_end = .
+                0x00000000a00009d0                . = ALIGN (0x4)
+
+.bss            0x00000000a00009d0       0x28
+ *(.dynbss)
+ *(COMMON)
+                0x00000000a00009d0                . = ALIGN ((. != 0x0)?0x4:0x1)
+ .bss           0x00000000a00009d0       0x28 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+                0x00000000a00009d0                __malloc_current_mallinfo
+
+.bss.tempArray  0x00000000a00009f8      0xa00
+ .bss.tempArray
+                0x00000000a00009f8      0xa00 build/main.o
+                0x00000000a00009f8                tempArray
+                0x00000000a00013f8                . = ALIGN (0x8)
+                0x00000000a00013f8                _end = .
+                0x00000000a00013f8                _bss_end = .
+
+.stack          0x00000000a00013f8      0x400
+                0x00000000a00013f8                _splim = .
+                0x00000000a00017f8                . = (. + _min_stack_size)
+ *fill*         0x00000000a00013f8      0x400 
+                0x00000000a00017f0                _stack = (. - 0x8)
+
+.heap           0x00000000a00017f8      0x800
+                0x00000000a00017f8                _heap_head = .
+                0x00000000a00017f8                end = _heap_head
+                0x00000000a0001ff8                . = (. + _min_heap_size)
+ *fill*         0x00000000a00017f8      0x800 
+                0x00000000a0001ff0                _heap_end = (. - 0x8)
+                0x0000000000010000                _bmxdudba_address = LENGTH (kseg1_data_mem)
+                0x0000000000010000                _bmxdupba_address = LENGTH (kseg1_data_mem)
+
+/DISCARD/
+ *(.pdr)
+ *(.rel.dyn)
+ *(.note.GNU-stack)
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.discard)
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+.mdebug.abi32   0x00000000a0001ff8        0x0
+ *(.mdebug.abi32)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/main.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/interrupt.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/UARTDrv.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/helper.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/system.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/SPIDrv.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/GPIODrv.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/BTN.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/COMMS.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/LED.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 build/RFM69.o
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .mdebug.abi32  0x00000000a0001ff8        0x0 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+
+.mdebug.abiN32
+ *(.mdebug.abiN32)
+
+.mdebug.abi64
+ *(.mdebug.abi64)
+
+.mdebug.abiO64
+ *(.mdebug.abiO64)
+
+.mdebug.eabi32
+ *(.mdebug.eabi32)
+
+.mdebug.eabi64
+ *(.mdebug.eabi64)
+
+.gcc_compiled_long32
+ *(.gcc_compiled_long32)
+
+.gcc_compiled_long64
+ *(.gcc_compiled_long64)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x12
+ *(.comment)
+ .comment       0x0000000000000000       0x12 build/main.o
+                                         0x13 (size before relaxing)
+ .comment       0x0000000000000012       0x13 build/interrupt.o
+ .comment       0x0000000000000012       0x13 build/UARTDrv.o
+ .comment       0x0000000000000012       0x13 build/helper.o
+ .comment       0x0000000000000012       0x13 build/system.o
+ .comment       0x0000000000000012       0x13 build/SPIDrv.o
+ .comment       0x0000000000000012       0x13 build/BTN.o
+ .comment       0x0000000000000012       0x13 build/LED.o
+ .comment       0x0000000000000012       0x13 build/RFM69.o
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .comment       0x0000000000000012       0x13 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+
+.reginfo        0x0000000000000000       0x18
+ .reginfo       0x0000000000000000       0x18 build/main.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x1f8
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .debug_aranges
+                0x0000000000000020       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .debug_aranges
+                0x0000000000000060       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .debug_aranges
+                0x0000000000000080       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .debug_aranges
+                0x00000000000000a0       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .debug_aranges
+                0x00000000000000c0       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .debug_aranges
+                0x00000000000000e0       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .debug_aranges
+                0x0000000000000100       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .debug_aranges
+                0x0000000000000120       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .debug_aranges
+                0x0000000000000140       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .debug_aranges
+                0x0000000000000160       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .debug_aranges
+                0x0000000000000180       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .debug_aranges
+                0x00000000000001c0       0x18 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .debug_aranges
+                0x00000000000001d8       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x38f5
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x7d5 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .debug_info    0x00000000000007d5      0x404 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .debug_info    0x0000000000000bd9      0x1a9 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .debug_info    0x0000000000000d82      0x226 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .debug_info    0x0000000000000fa8      0x5fa /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .debug_info    0x00000000000015a2      0x70c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .debug_info    0x0000000000001cae      0x261 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .debug_info    0x0000000000001f0f      0x273 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .debug_info    0x0000000000002182      0x273 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .debug_info    0x00000000000023f5      0x64c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .debug_info    0x0000000000002a41      0x5fa /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .debug_info    0x000000000000303b      0x247 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .debug_info    0x0000000000003282      0x1cd /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .debug_info    0x000000000000344f      0x2a9 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .debug_info    0x00000000000036f8       0xc2 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .debug_info    0x00000000000037ba      0x13b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.debug_abbrev   0x0000000000000000     0x1534
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x1b4 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x00000000000001b4      0x13b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .debug_abbrev  0x00000000000002ef      0x152 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .debug_abbrev  0x0000000000000441      0x195 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .debug_abbrev  0x00000000000005d6      0x16b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .debug_abbrev  0x0000000000000741      0x174 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .debug_abbrev  0x00000000000008b5      0x163 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .debug_abbrev  0x0000000000000a18      0x170 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .debug_abbrev  0x0000000000000b88      0x170 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .debug_abbrev  0x0000000000000cf8      0x17d /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .debug_abbrev  0x0000000000000e75      0x16b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .debug_abbrev  0x0000000000000fe0      0x152 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .debug_abbrev  0x0000000000001132      0x152 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .debug_abbrev  0x0000000000001284      0x16d /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .debug_abbrev  0x00000000000013f1       0x70 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .debug_abbrev  0x0000000000001461       0xd3 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.debug_line     0x0000000000000000     0x3f5a
+ *(.debug_line)
+ .debug_line    0x0000000000000000      0x2e5 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .debug_line    0x00000000000002e5      0x584 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .debug_line    0x0000000000000869      0x107 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .debug_line    0x0000000000000970      0x215 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .debug_line    0x0000000000000b85      0xc9c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .debug_line    0x0000000000001821      0x9c2 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .debug_line    0x00000000000021e3      0x114 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .debug_line    0x00000000000022f7      0x18c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .debug_line    0x0000000000002483      0x18c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .debug_line    0x000000000000260f      0x775 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .debug_line    0x0000000000002d84      0xd03 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .debug_line    0x0000000000003a87       0xcb /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .debug_line    0x0000000000003b52      0x11b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .debug_line    0x0000000000003c6d      0x1ed /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .debug_line    0x0000000000003e5a       0x55 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .debug_line    0x0000000000003eaf       0xab /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.debug_frame    0x0000000000000000      0x298
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x44 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .debug_frame   0x0000000000000044       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .debug_frame   0x0000000000000064       0x30 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .debug_frame   0x0000000000000094       0x3c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .debug_frame   0x00000000000000d0       0x48 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .debug_frame   0x0000000000000118       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .debug_frame   0x0000000000000138       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .debug_frame   0x0000000000000158       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .debug_frame   0x0000000000000178       0x48 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .debug_frame   0x00000000000001c0       0x3c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .debug_frame   0x00000000000001fc       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .debug_frame   0x000000000000021c       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .debug_frame   0x000000000000023c       0x3c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .debug_frame   0x0000000000000278       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.debug_str      0x0000000000000000      0xaa5
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x1e5 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+                                        0x21e (size before relaxing)
+ .debug_str     0x00000000000001e5      0x21b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+                                        0x2dd (size before relaxing)
+ .debug_str     0x0000000000000400       0x53 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+                                        0x1ab (size before relaxing)
+ .debug_str     0x0000000000000453       0xdc /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+                                        0x23b (size before relaxing)
+ .debug_str     0x000000000000052f      0x12b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+                                        0x2b0 (size before relaxing)
+ .debug_str     0x000000000000065a      0x117 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+                                        0x352 (size before relaxing)
+ .debug_str     0x0000000000000771       0x55 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+                                        0x1c1 (size before relaxing)
+ .debug_str     0x00000000000007c6       0x5a /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+                                        0x1e5 (size before relaxing)
+ .debug_str     0x0000000000000820       0x36 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+                                        0x1e5 (size before relaxing)
+ .debug_str     0x0000000000000856      0x15d /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+                                        0x3aa (size before relaxing)
+ .debug_str     0x00000000000009b3       0x38 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+                                        0x2b0 (size before relaxing)
+ .debug_str     0x00000000000009eb       0x3c /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+                                        0x1c7 (size before relaxing)
+ .debug_str     0x0000000000000a27       0x40 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+                                        0x1bd (size before relaxing)
+ .debug_str     0x0000000000000a67       0x3e /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+                                        0x262 (size before relaxing)
+ .debug_str     0x0000000000000aa5      0x18d /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .debug_str     0x0000000000000aa5      0x1aa /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.debug_loc      0x0000000000000000     0x7071
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0xabf /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .debug_loc     0x0000000000000abf      0x8ec /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .debug_loc     0x00000000000013ab      0x11b /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .debug_loc     0x00000000000014c6      0x197 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .debug_loc     0x000000000000165d     0x1815 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .debug_loc     0x0000000000002e72     0x1023 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .debug_loc     0x0000000000003e95      0x129 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .debug_loc     0x0000000000003fbe      0x2af /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .debug_loc     0x000000000000426d      0x2af /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .debug_loc     0x000000000000451c      0xe4d /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .debug_loc     0x0000000000005369     0x18d2 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .debug_loc     0x0000000000006c3b       0xa1 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .debug_loc     0x0000000000006cdc      0x154 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .debug_loc     0x0000000000006e30      0x1c8 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .debug_loc     0x0000000000006ff8       0x79 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0xd08
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0xe0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .debug_ranges  0x00000000000000e0       0xd8 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .debug_ranges  0x00000000000001b8       0x30 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .debug_ranges  0x00000000000001e8       0x70 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .debug_ranges  0x0000000000000258      0x280 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .debug_ranges  0x00000000000004d8      0x1b0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .debug_ranges  0x0000000000000688       0x48 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .debug_ranges  0x00000000000006d0       0x50 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .debug_ranges  0x0000000000000720       0x50 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .debug_ranges  0x0000000000000770      0x1c0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .debug_ranges  0x0000000000000930      0x280 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .debug_ranges  0x0000000000000bb0       0x38 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .debug_ranges  0x0000000000000be8       0x30 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .debug_ranges  0x0000000000000c18       0xd0 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .debug_ranges  0x0000000000000ce8       0x20 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ *(.gnu.attributes)
+ .gnu.attributes
+                0x0000000000000000       0x10 build/main.o
+ .gnu.attributes
+                0x0000000000000010       0x10 build/interrupt.o
+ .gnu.attributes
+                0x0000000000000020       0x10 build/UARTDrv.o
+ .gnu.attributes
+                0x0000000000000030       0x10 build/helper.o
+ .gnu.attributes
+                0x0000000000000040       0x10 build/system.o
+ .gnu.attributes
+                0x0000000000000050       0x10 build/SPIDrv.o
+ .gnu.attributes
+                0x0000000000000060       0x10 build/GPIODrv.o
+ .gnu.attributes
+                0x0000000000000070       0x10 build/BTN.o
+ .gnu.attributes
+                0x0000000000000080       0x10 build/COMMS.o
+ .gnu.attributes
+                0x0000000000000090       0x10 build/LED.o
+ .gnu.attributes
+                0x00000000000000a0       0x10 build/RFM69.o
+ .gnu.attributes
+                0x00000000000000b0       0x10 build/processor.o
+ .gnu.attributes
+                0x00000000000000c0       0x10 /tmp/cczRijVl.o
+ .gnu.attributes
+                0x00000000000000d0       0x10 /tmp/ccwb0chm.o
+ .gnu.attributes
+                0x00000000000000e0       0x10 /tmp/ccCgy6Jk.o
+ .gnu.attributes
+                0x00000000000000f0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-w_pow.o)
+ .gnu.attributes
+                0x0000000000000100       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_pow.o)
+ .gnu.attributes
+                0x0000000000000110       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-e_sqrt.o)
+ .gnu.attributes
+                0x0000000000000120       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_fabs.o)
+ .gnu.attributes
+                0x0000000000000130       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_finite.o)
+ .gnu.attributes
+                0x0000000000000140       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_lib_ver.o)
+ .gnu.attributes
+                0x0000000000000150       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_nan.o)
+ .gnu.attributes
+                0x0000000000000160       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_rint.o)
+ .gnu.attributes
+                0x0000000000000170       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libm.a(lib_a-s_scalbn.o)
+ .gnu.attributes
+                0x0000000000000180       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-errno.o)
+ .gnu.attributes
+                0x0000000000000190       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-impure.o)
+ .gnu.attributes
+                0x00000000000001a0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memset.o)
+ .gnu.attributes
+                0x00000000000001b0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sprintf.o)
+ .gnu.attributes
+                0x00000000000001c0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-svfprintf.o)
+ .gnu.attributes
+                0x00000000000001d0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-nano-vfprintf_i.o)
+ .gnu.attributes
+                0x00000000000001e0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reallocr.o)
+ .gnu.attributes
+                0x00000000000001f0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-freer.o)
+ .gnu.attributes
+                0x0000000000000200       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mallocr.o)
+ .gnu.attributes
+                0x0000000000000210       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memchr.o)
+ .gnu.attributes
+                0x0000000000000220       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memcpy.o)
+ .gnu.attributes
+                0x0000000000000230       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-memmove.o)
+ .gnu.attributes
+                0x0000000000000240       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-mlock.o)
+ .gnu.attributes
+                0x0000000000000250       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-sbrkr.o)
+ .gnu.attributes
+                0x0000000000000260       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libc.a(lib_a-reent.o)
+ .gnu.attributes
+                0x0000000000000270       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_udivdi3.o)
+ .gnu.attributes
+                0x0000000000000280       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divsf3.o)
+ .gnu.attributes
+                0x0000000000000290       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunssfsi.o)
+ .gnu.attributes
+                0x00000000000002a0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatunsisf.o)
+ .gnu.attributes
+                0x00000000000002b0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(adddf3.o)
+ .gnu.attributes
+                0x00000000000002c0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(divdf3.o)
+ .gnu.attributes
+                0x00000000000002d0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(eqdf2.o)
+ .gnu.attributes
+                0x00000000000002e0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(gedf2.o)
+ .gnu.attributes
+                0x00000000000002f0       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(ledf2.o)
+ .gnu.attributes
+                0x0000000000000300       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(muldf3.o)
+ .gnu.attributes
+                0x0000000000000310       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(subdf3.o)
+ .gnu.attributes
+                0x0000000000000320       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(unorddf2.o)
+ .gnu.attributes
+                0x0000000000000330       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(fixunsdfsi.o)
+ .gnu.attributes
+                0x0000000000000340       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(floatsidf.o)
+ .gnu.attributes
+                0x0000000000000350       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clz.o)
+ .gnu.attributes
+                0x0000000000000360       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/soft-float/libgcc.a(_clzsi2.o)
+ .gnu.attributes
+                0x0000000000000370       0x10 /usr/lib/gcc/mipsel-elf/10.1.0/../../../../mipsel-elf/lib/soft-float/libnosys.a(sbrk.o)
+ .gnu.attributes
+                0x0000000000000380       0x10 build/processor.o
+OUTPUT(build/main.elf elf32-littlemips)
