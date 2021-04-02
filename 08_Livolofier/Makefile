@@ -52,10 +52,6 @@ ARCH =  -mmicromips -EL -msoft-float -march=m14k -mips32r2 # This produces worki
 LDSCRIPT_USED = elf32pic32mz.ld
 endif
 
-$(info	MCU_XC is $(MCU_XC))
-$(info	FAMILY is $(FAMILY))
-$(info	MCU_ASM_FILE is $(MCU_ASM_FILE))
-
 
 LDSCRIPTS = -T$(P32M_TOOLCHAIN_PATH)/proc/$(MCU)/procdefs.ld -T$(P32M_TOOLCHAIN_PATH)/ldscripts/$(LDSCRIPT_USED)
 STARTUPSCRIPTS = $(P32M_TOOLCHAIN_PATH)/libpic32/startup/crt0.S $(P32M_TOOLCHAIN_PATH)/libpic32/startup/general-exception.S

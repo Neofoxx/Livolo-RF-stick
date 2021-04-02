@@ -14,6 +14,7 @@
 #include <SPIDrv.h>
 #include <BTN.h>
 #include <LED.h>
+#include <COMMS.h>
 #include <helper.h>
 #include <RFM69.h>
 
@@ -27,9 +28,9 @@
 #define LIVOLO_ZERO_LEN_MAX	(9+2)
 
 
-volatile char tempArray[2560];
-volatile uint32_t lengthArray = 0;
-uint8_t retBuffer[8];
+char tempArray[512];
+uint32_t lengthArray = 0;
+
 
 void simpleDelay(unsigned int noOfLoops){
     unsigned int i = 0;
@@ -38,6 +39,23 @@ void simpleDelay(unsigned int noOfLoops){
         asm("nop");
     }
 }
+
+void MIPS32 INTEnableSystemMultiVectoredInt(void)
+{
+    uint32_t val;
+
+    // set the CP0 cause IV bit high
+    asm volatile("mfc0   %0,$13" : "=r"(val));
+    val |= 0x00800000;
+    asm volatile("mtc0   %0,$13" : "+r"(val));
+
+    INTCONSET = _INTCON_MVEC_MASK;
+
+    // set the CP0 status IE bit high to turn on interrupts
+    //INTEnableInterrupts();
+	asm("ei");
+}
+
 
 void setup(){
 
@@ -86,13 +104,22 @@ void setup(){
 	//	_CP0_BIS_CAUSE(_CP0_CAUSE_IV_MASK);
 
 	// Enable multi-vectored mode
-//	INTCONSET = _INTCON_MVEC_MASK;
+
 
 	// set the CP0 status IE bit high to turn on interrupts
 	//INTEnableInterrupts();
-//	asm("ei");	// Compiler handles this, but should be same as _CP0_BIS_STATUS(_CP0_STATUS_IE_MASK)
+	//asm("ei");	// Compiler handles this, but should be same as _CP0_BIS_STATUS(_CP0_STATUS_IE_MASK)
 
+	// As per datasheet
+	unsigned int temp_CP0;
+	asm volatile("di"); 
+	asm volatile("ehb");
+	temp_CP0 = _CP0_GET_CAUSE();
+	temp_CP0 |= 0x00800000;
+	_CP0_SET_CAUSE(temp_CP0);
+	INTCONSET = _INTCON_MVEC_MASK;
 	
+	asm volatile("ei"); 
 }
 
 void rssiSniffer(){
@@ -107,6 +134,8 @@ void rssiSniffer(){
 
 	int16_t maxRSSI = -128;
 	int32_t maxFreq = 0;
+	
+	LED_setGreen(1);
 
 	for (; startFreq <= stopFreq; startFreq = startFreq + step){
 		rssiCurr = -128;
@@ -124,32 +153,39 @@ void rssiSniffer(){
 			maxFreq = startFreq;
 		}
 		
-		lengthArray = sprintf(tempArray, "RSSI @ %dkHz is %ddBm\n", startFreq/1000, rssiCurr);
+		lengthArray = sprintf(tempArray, "RSSI @ %ldkHz is %ddBm\n", startFreq/1000, rssiCurr);
 		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);    
 		
 				
 	}
 
-	lengthArray = sprintf(tempArray, "Peak RSSI was %ddBm @ %dkHz\n", maxRSSI, maxFreq/1000);
+	lengthArray = sprintf(tempArray, "Peak RSSI was %ddBm @ %ldkHz\n", maxRSSI, maxFreq/1000);
 	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);   
+	
+	LED_setGreen(0);
 
-	delayms(5000);
+
+	RFM69_Init();	// Need to set back to proper frequency, and this is the quickest.
 }
 
-void tryCapture(){
+void tryCapture(int16_t time, int16_t minRssi){
+
+	uint32_t toRun = true;
 
 	uint32_t startTime = _CP0_GET_COUNT();
-	uint32_t totalCount = (((uint64_t)FCLK/(uint64_t)2) * (uint64_t)5000) / 1000;	
+	uint32_t totalCount = (((uint64_t)FCLK/(uint64_t)2) * (uint64_t)time) / 1000;	
 
-	lengthArray = sprintf(tempArray, "Packet Capture procedure. Waiting for RSSI > -70dBm\n");
+	LED_setGreen(1);
+
+	lengthArray = sprintf(tempArray, "Packet Capture procedure. Waiting for RSSI >= %ddBm\n", minRssi);
 	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
 
 	// Perform for x seconds
-	while((_CP0_GET_COUNT() - startTime) <= totalCount){
+	while(toRun){
 
 		int16_t tempRssi = RFM69_GetRSSI();
 
-		if (tempRssi > -90){
+		if (tempRssi >= minRssi){
 			lengthArray = sprintf(tempArray, "RSSI is good (%ddBm), proceeding\n", tempRssi);
 			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);	
 			
@@ -202,6 +238,9 @@ void tryCapture(){
 				
 				if (currBit == prevBit){
 					currBitCounter++;
+					
+					// Should check if we're checking the last bit (dataCounter == 22)
+					// .....
 				}
 				else{
 					//lengthArray = sprintf(tempArray, "Bit val %d, length %d\n", prevBit, currBitCounter);
@@ -273,9 +312,25 @@ void tryCapture(){
 			SPIDrv_Init(1000000, 1, 0, 0, SPI_MODE_NORMAL);		// Revert back to normal
 		}
 	
+	
+	
+		// Check exit conditions
+		// Either timeout (when > 0), or any new character in buffer (non-exclusive)
+		if (time > 0){
+			if ((_CP0_GET_COUNT() - startTime) >= totalCount){
+				toRun = 0;
+			}
+		}
+		
+		if (COMMS_helper_dataLen(&comStruct_UART_RX)){
+			toRun = 0;
+		}
+	
 	}
 	
-	lengthArray = sprintf(tempArray, "Timeout, procedure end");
+	LED_setGreen(0);
+	
+	lengthArray = sprintf(tempArray, "Read end\n");
 	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
 	
 }
@@ -287,13 +342,15 @@ void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
 	uint8_t bitPos = 7;
 	
 	memset(outData, 0, sizeof(outData));
-	
+		
 	// Preamble is a LONG pulse.
 	// Subsequent pulses are two short pulses for 0, or 1 long pulse for 1.
 
 	uint32_t counter = 0;
 	uint32_t counterInner = 0;
 	uint32_t nextVal = 0;
+	
+	LED_setRed(1);
 	
 	for (counter = 0; counter < (LIVOLO_PREAMBLE_LEN_MIN + LIVOLO_PREAMBLE_LEN_MAX) / 2; counter++){
 		outData[lenData] = outData[lenData] | (1<<bitPos);
@@ -382,7 +439,16 @@ void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
 		}
 	}
 	
-	// There should be an extra 1 at the end, to give the decoder an edge to latch on to (all pun intended)
+	// The data HAS to end on a 0.
+	
+	// Should there be an extra 1 at the end, to give the decoder an edge to latch on to? (all pun intended)
+	// Maybe, need to check if a Livolo devices accepts it or not
+	// -> If it doesn't then the SPI thing won't be completely OK for this,
+	// -> and a simple "if timer overflown then set bit = x" will be better...
+	// We could also... copy the last sent byte to the _end_ of the array. And rotate. Coyote laying the tracks style
+	// 'cos you gotta know, the original remote is fucky. Sometimes it drops a bit at the end, so I suspect fimilar fuckery.
+	
+	/*
 	for (counterInner = 0; counterInner < (LIVOLO_ONE_LEN_MIN + LIVOLO_ONE_LEN_MAX) / 2; counterInner++){
 		outData[lenData] = outData[lenData] | (nextVal<<bitPos);
 		bitPos--;
@@ -393,7 +459,7 @@ void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
 	}
 	
 	nextVal = (nextVal + 1) & 0x01;
-	
+	*/
 	
 	// Done.
 	
@@ -418,145 +484,177 @@ void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
 	
 	SPIDrv_Init(57142, 1, 0, 0, SPI_MODE_TX_OTHER_SDO);
 	
-
+/*
 	// We will write 1B more - it's just 0s anyway
 	for (counter = 0; counter < numTimes; counter++){		
 		SPIDrv_SendBlocking(outData, lenData + 1);
 	}
-	
+*/
+
+	for (counter = 0; counter < numTimes; counter++){	
+		// If we have nicely algined data, just send, no fuckery needed
+		if (bitPos == 7){
+			SPIDrv_SendBlocking(outData, lenData);
+		}
+		else{
+			SPIDrv_SendBlocking(outData, lenData + 	1);	// Ne da se mi.
+		}
+	}
 	
 	SPIDrv_Init(1000000, 1, 0, 0, SPI_MODE_NORMAL);		// Revert back to normal
 	RFM69_SetReg(RFM69_RegOpMode, temp);
 	while(!(RFM69_ReadReg(RFM69_RegIrqFlags1) & RFM69_RegIrqFlags1_Bit_Mask_ModeReady)){
 	}
+	
+	LED_setRed(0);
 
+}
 
+void toUpper(char *buf, uint32_t len){
+	uint32_t counter = 0;
+	for (counter = 0; counter < len; counter++){
+		if (buf[counter] >= 97 && buf[counter] <= 122){
+			buf[counter] = buf[counter] - 32;
+		}
+	}
+}
+
+void printDebug(){
+	uint8_t retBuffer[8];
+	uint8_t temp;
+
+	// REVISION
+	lengthArray = sprintf(tempArray, "RFM69 Stats & specs...\n");
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+	
+	RFM69_GetRevision(retBuffer);
+	lengthArray = sprintf(tempArray, "Revision %d, Mask rev. %d\n", retBuffer[0], retBuffer[1]);
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+	
+	temp = RFM69_ReadReg(RFM69_RegIrqFlags1);
+	lengthArray = sprintf(tempArray, "\nStatus register is %02x\n", temp);
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+	
+	temp = RFM69_ReadReg(RFM69_RegIrqFlags2);
+	lengthArray = sprintf(tempArray, "Other status register is %02x\n", temp);
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);   
+	
+	// RSSI
+	int16_t int_temp = RFM69_GetRSSI();
+	lengthArray = sprintf(tempArray, "Current RSSI is %ddBm\n", int_temp);
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);	
+	
+	//TEMPERATURE
+	temp = RFM69_GetTemp();
+	lengthArray = sprintf(tempArray, "Temperature raw is %d, probably around %d°C\n", temp, 170-temp);
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+	
+	lengthArray = sprintf(tempArray, "Button status: %d", BTN_getStatus());
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);	
 }
 
 int main(){
 
-	bool printout = true;
+	//bool printout = true;
+	uint32_t lenPos = 0;
+	char myBuffer[cyclicBufferSize];
+	
+	char command[17];
+	int32_t operands[4];
 
 	setup();
 
 
     for(;;){
+/*    
+    	lengthArray = sprintf(tempArray, "Looping %ld\n", COMMS_helper_dataLen(&comStruct_UART_RX));
+    	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+   
+   		lengthArray = sprintf(tempArray, "Vals 0x%08X 0x%08X 0x%08X 0x%08X\n", IFS1, IEC1, IPC10, INTCON);
+    	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+*/    
     
+    
+    	// Find out, if we need to go:
+    	// - TX /w param (remoteId, keyCode, numTransmits)
+    	// - RX /w param (time?, rssi?)
+    	
+    	if (COMMS_helper_charPresent(&comStruct_UART_RX, '\n', &lenPos)){
+    		COMMS_helper_getData(&comStruct_UART_RX, (uint8_t *)myBuffer, lenPos);
+    	}
+    	else if (!COMMS_helper_spaceLeft(&comStruct_UART_RX)){
+    		// STOP SPAMMING
+    		COMMS_helper_dropAll(&comStruct_UART_RX);
+    		continue;
+    	}
+    	else{
+    		continue;
+    	}
+    	
+    	toUpper(myBuffer, lenPos);
+    	
+    	sscanf(myBuffer, "%16s", command);
+    	
+    	if (0 == strcmp(command, "SNIFF")){
+    		sscanf(myBuffer, "%16s %ld %ld", command, &operands[0], &operands[1]);
+    		if (operands[0] < -115 || operands[0] > 0			// Min RSSI
+    			|| operands[1] < 0 || operands[1] > 15000){		// time to sniff. 0 == forever
+    			// Bork & return
+    			continue;
+    		}
+    		
+    		tryCapture(operands[1], operands[0]);
+    	}
+    	
+    	else if (0 == strcmp(command, "TRANSMIT")){
+    		sscanf(myBuffer, "%16s %ld %ld %ld", command, &operands[0], &operands[1], &operands[2]);
+    		if (operands[0] < 0 || operands[0] >= 65535			// Remote id is 16-bit
+    			|| operands[1] < 0 || operands[1] >= 127		// Keycode is 7-bit
+    			|| operands[2] < 0 || operands[2] >= 1001){		// 1000 repeats is 8 seconds
+    			// Bork & return
+    			continue;
+    		}
+    		
+    		sendPacket(operands[0], operands[1], operands[2]);
+    	}   
+    	
+    	else if (0 == strcmp(command, "DEBUG")){
+    		printDebug();
+    	}
+    	
+    	else if (0 == strcmp(command, "SCAN")){
+    		rssiSniffer();	// Fixed frequencies is fine for now.
+    	}
+    	    
+
+/*    
     	lengthArray = sprintf(tempArray, "Waiting %d 0x%X 0x%X\n", BTN_getStatus(), PORTA, CNPUA);
 		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
 		LED_setRed(1);
+
+
 
     	if (BTN_getStatus()){
     		printout = !printout;
     	}
 
-    	
+	
     	if(printout){
     		LED_setGreen(1);
     		uint8_t temp;
-    		
-  		
-    		// TEMPERATURE
-//    		lengthArray = sprintf(tempArray, "\nTrying to read RFM69 temperature... ");
-//    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-    		
-//    		temp = RFM69_GetTemp();
-//    		lengthArray = sprintf(tempArray, "Read %d, probably around %dC\n", temp, 170-temp);
-//    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-  		
-    		
-    		// REVISION
-    		lengthArray = sprintf(tempArray, "Trying to read RFM69 Revision...\n");
-    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-    		
-    		RFM69_GetRevision(retBuffer);
-    		lengthArray = sprintf(tempArray, "Revision %d, Mask rev. %d\n", retBuffer[0], retBuffer[1]);
-    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-    		
-    		lengthArray = sprintf(tempArray, "\nStatus register is %02x\n", temp);
-			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-			
-			temp = RFM69_ReadReg(RFM69_RegIrqFlags2);
-			lengthArray = sprintf(tempArray, "Other status register is %02x\n", temp);
-			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);   
-			
-			// RSSI
-    		lengthArray = sprintf(tempArray, "Trying to read Current RSSI... ");
-    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-    		
-    		int16_t int_temp = RFM69_GetRSSI();
-    		lengthArray = sprintf(tempArray, "RSSI is supposed to be %ddBm\n", int_temp);
-    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);		
-    		
-    		tryCapture();
-    		
-    		
-
-    		
-    		
-/*		
-    		while(1){
-				// Status reg
-				temp = RFM69_ReadReg(RFM69_RegIrqFlags1);
-				lengthArray = sprintf(tempArray, "\nStatus register is %02x\n", temp);
-				UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-				
-				temp = RFM69_ReadReg(RFM69_RegIrqFlags2);
-				lengthArray = sprintf(tempArray, "Other status register is %02x\n", temp);
-				UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-				
-				temp =  RFM69_ReadReg(RFM69_RegRssiValue);
-				lengthArray = sprintf(tempArray, "RSSI val raw %d %0x\n", temp, RFM69_ReadReg(RFM69_RegRssiConfig));
-				UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-				
-				temp = RFM69_ReadReg(RFM69_RegTemp1);
-				lengthArray = sprintf(tempArray, "T1 raw %d\n", temp);
-				UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-				
-				temp = RFM69_ReadReg(RFM69_RegTemp2);
-				lengthArray = sprintf(tempArray, "T2 raw %d\n", temp);
-				UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-				
-				if (BTN_getStatus()){
-					
-					RFM69_SetReg(RFM69_RegTemp1, RFM69_RegTemp1_Bit_Mask_TempMeasureStart);
-					lengthArray = sprintf(tempArray, "SET\n", temp);
-					UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-					
-    				RFM69_SetReg(RFM69_RegRssiConfig, RFM69_RegRssiConfig_Bit_Mask_RssiStart);	// Trigger an RSSI measurement
-    				lengthArray = sprintf(tempArray, "SET\n");
-					UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-					
-					RFM69_SetReg(RFM69_RegPacketConfig2, RFM69_RegPacketConfig2_Bit_Mask_RestartRx);	// Trigger an RSSI measurement
-    				
-				}
-				
-				delayms(100);
-			}
-
-*/
-
-
-    		
-    		
-    		
-    		
-    				
+   				
     	}
     	else{
     		LED_setGreen(0);
     		
     		sendPacket(25984, 68<<1, 100);
     	}
-   	
-    	
-    	
     	
     	delayms(250);
     	delayms(250);
     	delayms(250);
     	
-    	    	
+*/    	    	
     }
 
 /**********************************************************************/

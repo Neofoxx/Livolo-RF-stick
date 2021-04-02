@@ -3,6 +3,8 @@
 #include <GPIODrv.h>
 #include <inttypes.h>
 #include <interrupt.h>
+#include <COMMS.h>
+#include <LED.h>
 
 // Init UART - UART2
 // RX is RC8 aka. RPC8. Page 132 of manual says to set U2RXR<3:0> to ?
@@ -12,19 +14,17 @@
 // Pin On-change notifications need to be disabled (default)
 // Fun fact, all I/O modules have CLR, SET and INV register for atomic bit-manipulation. Neat
 
-volatile uint32_t count = 0;
-uint8_t temp;
-
-// For interrupts http://wiki.pinguino.cc/index.php/PIC32MX_Development#Using_CHANGE_NOTICE_interrupt
-//U1RX – UART1 Receive Done IRQ40 Vector32 IFS1<8> IEC1<8> IPC8<4:2> IPC8<1:0>
-//U1TX – UART1 Transfer Done IRQ41 Vector32 IFS1<9> IEC1<9> IPC8<4:2> IPC8<1:0>
 
 // As defined in interrupt.h/c
-INTERRUPT(UART2Interrupt){
+INTERRUPT(UART2RxInterrupt){
 	// Should check if TX or RX interrupt
 	//count++;		// Increase counter, for our test
 	//temp = UART_RX_reg;	// Readout data, otherwise we'll be stuck here
 	//IFS1bits.U2RXIF = 0;	// Clear bits. TODO nicer.
+	uint8_t temp = UART_RX_reg;
+	COMMS_helper_addToBuf(&comStruct_UART_RX, &temp, 1);	// Auto checks for space
+	IFS1bits.U2RXIF = 0;	// Check which register it actually is
+	// Also remember to actually enable the interrupts...
 }
 
 
@@ -68,11 +68,12 @@ void UARTDrv_Init(uint32_t baud){
 	UART_BRG_reg = (24000000 / (U2MODEbits.BRGH ? 4 : 16)) / baud - 1;
 
 	// New - setup interrupt
-	//IPC9bits.U2IP = 1;		// Priorty = 1 (one above disabled)
-	//IPC9bits.U2IS = 0;		// Subpriority = 0 (least)
-	//IEC1bits.U2RXIE = 1;	// Enable interrupt
+	IPC10bits.U2RXIP = 1;		// Priorty = 1 (one above disabled)
+	IPC10bits.U2RXIS = 0;	// Subpriority = 0 (least)
+	IEC1bits.U2RXIE = 1;	// Enable interrupt
 
-	UART_MODE_bits.ON = 1;
+	UART_MODE_bits.ON = 1;		// UART is enabled, pins controlled by UART as defined by UEN and UTXEN
+
 }
 
 void UARTDrv_SendBlocking(uint8_t * buffer, uint32_t length){
@@ -88,9 +89,5 @@ void UARTDrv_SendBlocking(uint8_t * buffer, uint32_t length){
 	while(U2STAbits.TRMT){
 		_nop();
 	}
-}
-
-uint32_t UARTDrv_GetCount(){
-	return count;
 }
 

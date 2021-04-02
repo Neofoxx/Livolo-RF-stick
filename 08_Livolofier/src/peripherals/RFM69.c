@@ -245,9 +245,12 @@ void RFM69_Init(){
 		| ((0b01 << RFM69_RegDataModul_Bit_Shift_ModulationType) & RFM69_RegDataModul_Bit_Mask_ModulationType));	// OOK modulation
 	// No shaping of data
 	
-	RFM69_SetBitrate(5780);	// Let's start at 4.8kbps
+	//RFM69_SetBitrate(5780);	// 5780bps works for Livolo RX
+	//RFM69_SetBitrate(1200);	// 1.2kbps doesn't work for Livolo RX
+	RFM69_SetBitrate(13000);	// 13kbps works for Livolo RX (maybe even better?)
 	
 	RFM69_SetFreqDeviation(5000);	// 5kHz deviation, shouldn't matter in OOK
+	//RFM69_SetFreqDeviation(50000);	// 5kHz deviation, shouldn't matter in OOK
 	
 	RFM69_SetRfCarrierFreq(433920000);	// Remote should be at 433.92 according to design doc -> And it is
 
@@ -263,9 +266,9 @@ void RFM69_Init(){
 	
 	RFM69_SetLNA(1, 0);	// Set LNA impedance to 200ohm as per datasheet, leave gain to AGC
 	
-	//RFM69_SetRxBw(1, 2, 1300);	// OOK modulation, 4% of RxBw, RxBw = 1.3kHz (default, very narrow)
-	RFM69_SetRxBw(1, 2, 13000);	// OOK modulation, 4% of RxBw
-	//RFM69_SetRxBw(1, 2, 250000);	// OOK modulation, 4% of RxBw, RxBw = 1.3kHz (default, very narrow)
+	//RFM69_SetRxBw(1, 2, 1300);	// OOK modulation, 4% of RxBw, RxBw = 1.3kHz (default, very narrow) - doesn't work for Livolo RX
+	RFM69_SetRxBw(1, 2, 13000);	// OOK modulation, 4% of RxBw - works for Livolo RX
+	//RFM69_SetRxBw(1, 2, 250000);	// OOK modulation, 4% of RxBw, RxBw = 250kHz (very broad) - works for Livolo RX
 	
 	
 	// AFC is probably AutoFrequencyCorrection? Don't need it

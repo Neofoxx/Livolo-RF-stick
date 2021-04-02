@@ -5,6 +5,5 @@
 
 void UARTDrv_Init(uint32_t baud);
 void UARTDrv_SendBlocking(uint8_t * buffer, uint32_t length);
-uint32_t UARTDrv_GetCount();
 
 #endif
