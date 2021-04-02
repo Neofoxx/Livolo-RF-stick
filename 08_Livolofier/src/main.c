@@ -1,5 +1,4 @@
 #include <p32xxxx.h>    // Always in first place to avoid conflict with const.h -> this includes xc.h
-#include <system.h>     // System setup
 #include <const.h>      // MIPS32
 #include <inttypes.h>
 #include <string.h>
@@ -9,6 +8,7 @@
 #include <stdbool.h>
 
 // Drivers for HW
+#include <configBits.h>
 #include <GPIODrv.h>
 #include <UARTDrv.h>
 #include <SPIDrv.h>
@@ -17,80 +17,81 @@
 #include <helper.h>
 #include <RFM69.h>
 
-const uint32_t __attribute__((section (".SECTION_DEVCFG3"))) temp3 = 
-	0xFFF0000
-	| (0b1 << _DEVCFG3_FVBUSONIO_POSITION)	// USBVBUSON controlled by USB module
-	| (0b0 << _DEVCFG3_FUSBIDIO_POSITION)	// USBID controlled by PORT function
-	| (0b0 << _DEVCFG3_IOL1WAY_POSITION)		// Allow multiple reconfigurations of Peripheral Pins
-	| (0b0 << _DEVCFG3_PMDL1WAY_POSITION)	// Allow multiple reconfigurations of Peripheral Module Disable
-	| (0xF0C5 << _DEVCFG3_USERID_POSITION);	// UserID is F0C5
 
-const uint32_t __attribute__((section (".SECTION_DEVCFG2"))) temp2 =
-	0xFFF87888
-	| (0b001 << _DEVCFG2_FPLLODIV_POSITION)	// PLL output divided by 2 (96MHz/2 = 48Mhz)
-	| (0b0 << _DEVCFG2_UPLLEN_POSITION)		// USB PLL Enabled
-	| (0b001 << _DEVCFG2_UPLLIDIV_POSITION)	// USB PLL input divided by 2 (8MHz/2 = 4MHz)
-	| (0b111 << _DEVCFG2_FPLLMUL_POSITION)	// PLL Multiplier is 24 (4MHz*24 = 96MHz)
-	| (0b001 << _DEVCFG2_FPLLIDIV_POSITION);	// PLL input divided by 2 (8MHz/2 = 4MHz)
+// These numbers are for a baud of 57142bps.
+#define LIVOLO_PREAMBLE_LEN_MIN	(32-2)
+#define LIVOLO_PREAMBLE_LEN_MAX	(32+2)
+#define LIVOLO_ONE_LEN_MIN	(19-2)
+#define LIVOLO_ONE_LEN_MAX	(19+2)
+#define LIVOLO_ZERO_LEN_MIN	(9-2)
+#define LIVOLO_ZERO_LEN_MAX	(9+2)
 
-const uint32_t __attribute__((section (".SECTION_DEVCFG1"))) temp1 =
-	0xFC200858
-	| (0b00 << _DEVCFG1_FWDTWINSZ_POSITION)	// Watchdog timer window size is 75%
-	| (0b0 << _DEVCFG1_FWDTEN_POSITION)		// Watchdog timer disabled, can be enabled in software
-	| (0b00000 << _DEVCFG1_WDTPS_POSITION)	// Watchdog timer postscale is 1
-	| (0b01 << _DEVCFG1_FCKSM_POSITION)		// Clock switching enabled, Fail-Safe Clock Monitoring DISABLED
-	| (0b01 << _DEVCFG1_FPBDIV_POSITION)	// PBCLK is SYSCLK / 2
-	| (0b1 << _DEVCFG1_OSCIOFNC_POSITION)	// CLOCK output disabled
-	| (0b01 << _DEVCFG1_POSCMOD_POSITION)	// XT ocillator mode
-	| (0b0 << _DEVCFG1_IESO_POSITION)		// Internal-External switchover disabled (Two-speed start-up disabled)
-	| (0b1 << _DEVCFG1_FSOSCEN_POSITION)		// Enable secondary oscillator (WARNING; CHECK IF PORTING)
-	| (0b011 << _DEVCFG1_FNOSC_POSITION);		// POSC (XT) + PLL selected
-
-const uint32_t __attribute__((section (".SECTION_DEVCFG0"))) temp0 =
-	0x6EF803E0								// Don't forget about that one 0
-	| (0b1 << _DEVCFG0_CP_POSITION)			// Code Protection disabled
-	| (0b1 << _DEVCFG0_BWP_POSITION)			// Boot Flash is Writeable during code execution
-	| (0b1111111111 << _DEVCFG0_PWP_POSITION)	// Memory is NOT write-protected
-	| (0b00 << _DEVCFG0_ICESEL_POSITION)		// PGEC4/PGED4 is used
-	| (0b1 << _DEVCFG0_JTAGEN_POSITION)		// JTAG is enabled
-#ifdef DEBUG_BUILD							// Defined with Makefile
-	| (0b11<<_DEVCFG0_DEBUG_POSITION);		// Debugger is DISABLED. Apparently the MX1/MX2 family need this disabled, for JTAG to work
-											// Note, application will run automatically, might want to add a delay at the beginning.
-#else
-	| (0b11<<_DEVCFG0_DEBUG_POSITION);		// Debugger is DISABLED (DEBUG bit) - DEBUG NEEDS TO BE DISABLED, IF NO DEBUGGER PRESENT! Otherwise code doesn't run.
-#endif
 
 volatile char tempArray[2560];
 volatile uint32_t lengthArray = 0;
 uint8_t retBuffer[8];
 
+void simpleDelay(unsigned int noOfLoops){
+    unsigned int i = 0;
+    while (i<noOfLoops){
+        i++;
+        asm("nop");
+    }
+}
+
 void setup(){
-	// What is the equivalent of SYSTEMConfigPerformance?
-	// -> Setting up the system for the required System Clock
-	// -> Seting up the Wait States
-	// -> Setting up PBCLK
-	// -> Setting up Cache module (not presenf on MX1/2, but is on MX4)
-	// Also of interest: https://microchipdeveloper.com/32bit:mx-arch-exceptions-processor-initialization
-	// See Pic32 reference manual, for CP0 info http://ww1.microchip.com/downloads/en/devicedoc/61113e.pdf
 
-	// DO NOT setup KSEG0 (cacheable are) on MX1/MX2, debugging will NOT work
-
-	BMXCONbits.BMXWSDRM = 0;	// Set wait-states to 0
 	
-	// System config, call with desired CPU freq. and PBCLK divisor
-	SystemConfig(48000000L, 2);	// Set to 48MHz, with PBCLK with divider 1 (same settings as DEVCFG)
 
-	//UARTDrv_Init(115200);
 
+	SYSKEY = 0x00000000;      // force lock
+	SYSKEY = 0xAA996655;      // unlock
+	SYSKEY = 0x556699AA; 
+
+	SPLLCON = (0b000 << 24)	// PLLODIV = PLL divide-by-1, so we get 24MHZ from 24MHz
+		| (0b0000001 << 16)		// PLLMULT = x3, so 8MHz * 3 = 24MHz
+		| (0b1 << 7);			// FRC is selected as input to PLL
+
+
+//	SPLLCON = (0b010 << 24)	// PLLODIV = PLL divide-by-4, so we get 24MHZ from 96MHz
+//	| (0b0000101 << 16)		// PLLMULT = x12, so 8MHz * 12 = 96MHz
+//	| (0b1 << 7);			// FRC is selected as input to PLL
+
+
+	simpleDelay(1000);
+
+
+	OSCCONbits.NOSC = 1;	// Switch to SPLL
+	
+	OSCCONSET = 1;			// Sets the OSWEN bit, that forces a change to news settings in NOSC
+	
+	SYSKEY = 0x00000000;      // force lock
+
+	simpleDelay(100000);
+
+	
 	LED_init();
 	BTN_init();
 	UARTDrv_Init(115200);
 	
+	
+	
 	SPIDrv_Init(1000000, 1, 0, 0, SPI_MODE_NORMAL);	// 1MHz, CKE = 1, CKP = 0, SMP = 0, normal SPI mode.
 	RFM69_Init();
 	
+	
 	// Enable interrupts
-	INTEnableSystemMultiVectoredInt();
+//	INTEnableSystemMultiVectoredInt();
+	
+	//	_CP0_BIS_CAUSE(_CP0_CAUSE_IV_MASK);
+
+	// Enable multi-vectored mode
+//	INTCONSET = _INTCON_MVEC_MASK;
+
+	// set the CP0 status IE bit high to turn on interrupts
+	//INTEnableInterrupts();
+//	asm("ei");	// Compiler handles this, but should be same as _CP0_BIS_STATUS(_CP0_STATUS_IE_MASK)
+
 	
 }
 
@@ -148,7 +149,7 @@ void tryCapture(){
 
 		int16_t tempRssi = RFM69_GetRSSI();
 
-		if (tempRssi > -70){
+		if (tempRssi > -90){
 			lengthArray = sprintf(tempArray, "RSSI is good (%ddBm), proceeding\n", tempRssi);
 			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);	
 			
@@ -193,16 +194,6 @@ void tryCapture(){
 			uint32_t data = 0;
 			uint8_t dataCounter = 0;
 			uint8_t shortCounter = 0;
-			
-// These numbers are for a baud of 57142bps.
-#define LIVOLO_PREAMBLE_LEN_MIN	(32-2)
-#define LIVOLO_PREAMBLE_LEN_MAX	(32+2)
-#define LIVOLO_ONE_LEN_MIN	(19-2)
-#define LIVOLO_ONE_LEN_MAX	(19+2)
-#define LIVOLO_ZERO_LEN_MIN	(9-2)
-#define LIVOLO_ZERO_LEN_MAX	(9+2)
-
-
 			
 			while (!done && bitPos<bitPosLimit){
 				uint32_t whichByte = bitPos >> 3;			// 3 bits from 0-7 are bit pos, other are bytes.
@@ -289,34 +280,193 @@ void tryCapture(){
 	
 }
 
+void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
+	// Prepare SPI out buffer first
+	uint8_t outData[64];
+	uint8_t lenData = 0;
+	uint8_t bitPos = 7;
+	
+	memset(outData, 0, sizeof(outData));
+	
+	// Preamble is a LONG pulse.
+	// Subsequent pulses are two short pulses for 0, or 1 long pulse for 1.
+
+	uint32_t counter = 0;
+	uint32_t counterInner = 0;
+	uint32_t nextVal = 0;
+	
+	for (counter = 0; counter < (LIVOLO_PREAMBLE_LEN_MIN + LIVOLO_PREAMBLE_LEN_MAX) / 2; counter++){
+		outData[lenData] = outData[lenData] | (1<<bitPos);
+		bitPos--;
+		if (bitPos > 7){
+			lenData++;
+			bitPos = 7;
+		}
+	}
+	
+	for (counter = 0; counter < 16; counter++){
+		if (id & (1<<(15-counter))){
+			for (counterInner = 0; counterInner < (LIVOLO_ONE_LEN_MIN + LIVOLO_ONE_LEN_MAX) / 2; counterInner++){
+				outData[lenData] = outData[lenData] | (nextVal<<bitPos);
+				bitPos--;
+				if (bitPos > 7){
+					lenData++;
+					bitPos = 7;
+				}
+			}
+			
+			nextVal = (nextVal + 1) & 0x01;
+					
+		}
+		else{
+			for (counterInner = 0; counterInner < (LIVOLO_ZERO_LEN_MIN + LIVOLO_ZERO_LEN_MAX) / 2; counterInner++){
+				outData[lenData] = outData[lenData] | (nextVal<<bitPos);
+				bitPos--;
+				if (bitPos > 7){
+					lenData++;
+					bitPos = 7;
+				}
+			}
+			
+			nextVal = (nextVal + 1) & 0x01;
+			
+			for (counterInner = 0; counterInner < (LIVOLO_ZERO_LEN_MIN + LIVOLO_ZERO_LEN_MAX) / 2; counterInner++){
+				outData[lenData] = outData[lenData] | (nextVal<<bitPos);
+				bitPos--;
+				if (bitPos > 7){
+					lenData++;
+					bitPos = 7;
+				}
+			}	
+			
+			nextVal = (nextVal + 1) & 0x01;
+		}
+	}
+	
+	for (counter = 0; counter < 7; counter++){
+		if (keycode & (1<<(7-counter))){
+			for (counterInner = 0; counterInner < (LIVOLO_ONE_LEN_MIN + LIVOLO_ONE_LEN_MAX) / 2; counterInner++){
+				outData[lenData] = outData[lenData] | (nextVal<<bitPos);
+				bitPos--;
+				if (bitPos > 7){
+					lenData++;
+					bitPos = 7;
+				}
+			}
+			
+			nextVal = (nextVal + 1) & 0x01;
+					
+		}
+		else{
+			for (counterInner = 0; counterInner < (LIVOLO_ZERO_LEN_MIN + LIVOLO_ZERO_LEN_MAX) / 2; counterInner++){
+				outData[lenData] = outData[lenData] | (nextVal<<bitPos);
+				bitPos--;
+				if (bitPos > 7){
+					lenData++;
+					bitPos = 7;
+				}
+			}
+			
+			nextVal = (nextVal + 1) & 0x01;
+			
+			for (counterInner = 0; counterInner < (LIVOLO_ZERO_LEN_MIN + LIVOLO_ZERO_LEN_MAX) / 2; counterInner++){
+				outData[lenData] = outData[lenData] | (nextVal<<bitPos);
+				bitPos--;
+				if (bitPos > 7){
+					lenData++;
+					bitPos = 7;
+				}
+			}	
+			
+			nextVal = (nextVal + 1) & 0x01;
+		}
+	}
+	
+	// There should be an extra 1 at the end, to give the decoder an edge to latch on to (all pun intended)
+	for (counterInner = 0; counterInner < (LIVOLO_ONE_LEN_MIN + LIVOLO_ONE_LEN_MAX) / 2; counterInner++){
+		outData[lenData] = outData[lenData] | (nextVal<<bitPos);
+		bitPos--;
+		if (bitPos > 7){
+			lenData++;
+			bitPos = 7;
+		}
+	}
+	
+	nextVal = (nextVal + 1) & 0x01;
+	
+	
+	// Done.
+	
+	
+	lengthArray = sprintf(tempArray, "Wrote to outData: %d %d\n", lenData, bitPos);
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+	
+	for (counter = 0; counter < (lenData+1); counter++){
+		lengthArray = sprintf(tempArray, "0x%X ", outData[counter]);
+		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+	}
+	lengthArray = sprintf(tempArray, "\n");
+	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+
+
+	// Config RFM for TXing
+	uint8_t temp = RFM69_ReadReg(RFM69_RegOpMode);
+	RFM69_SetReg(RFM69_RegOpMode, ((0b011 << RFM69_RegOpMode_Bit_Shift_Mode) & RFM69_RegOpMode_Bit_Mask_Mode) );		// Switch to TX mode, automatically.
+	
+	while(!(RFM69_ReadReg(RFM69_RegIrqFlags1) & RFM69_RegIrqFlags1_Bit_Mask_ModeReady)){
+	}
+	
+	SPIDrv_Init(57142, 1, 0, 0, SPI_MODE_TX_OTHER_SDO);
+	
+
+	// We will write 1B more - it's just 0s anyway
+	for (counter = 0; counter < numTimes; counter++){		
+		SPIDrv_SendBlocking(outData, lenData + 1);
+	}
+	
+	
+	SPIDrv_Init(1000000, 1, 0, 0, SPI_MODE_NORMAL);		// Revert back to normal
+	RFM69_SetReg(RFM69_RegOpMode, temp);
+	while(!(RFM69_ReadReg(RFM69_RegIrqFlags1) & RFM69_RegIrqFlags1_Bit_Mask_ModeReady)){
+	}
+
+
+}
+
 int main(){
 
-	bool printout = false;
+	bool printout = true;
 
 	setup();
 
 
     for(;;){
+    
+    	lengthArray = sprintf(tempArray, "Waiting %d 0x%X 0x%X\n", BTN_getStatus(), PORTA, CNPUA);
+		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+		LED_setRed(1);
+
     	if (BTN_getStatus()){
     		printout = !printout;
     	}
+
     	
     	if(printout){
-    		LED_setState(1);
+    		LED_setGreen(1);
     		uint8_t temp;
     		
-/*  		
+  		
     		// TEMPERATURE
-    		lengthArray = sprintf(tempArray, "\nTrying to read RFM69 temperature... ");
-    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+//    		lengthArray = sprintf(tempArray, "\nTrying to read RFM69 temperature... ");
+//    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
     		
-    		temp = RFM69_GetTemp();
-    		lengthArray = sprintf(tempArray, "Read %d, probably around %dC\n", temp, 170-temp);
-    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
-*/  		
+//    		temp = RFM69_GetTemp();
+//    		lengthArray = sprintf(tempArray, "Read %d, probably around %dC\n", temp, 170-temp);
+//    		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+  		
     		
     		// REVISION
-    		lengthArray = sprintf(tempArray, "Trying to read RFM69 Revision... ");
+    		lengthArray = sprintf(tempArray, "Trying to read RFM69 Revision...\n");
     		UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
     		
     		RFM69_GetRevision(retBuffer);
@@ -340,7 +490,7 @@ int main(){
     		
     		tryCapture();
     		
-/*    		
+    		
 
     		
     		
@@ -383,6 +533,7 @@ int main(){
 				
 				delayms(100);
 			}
+
 */
 
 
@@ -393,13 +544,18 @@ int main(){
     				
     	}
     	else{
-    		LED_setState(0);
+    		LED_setGreen(0);
+    		
+    		sendPacket(25984, 68<<1, 100);
     	}
-    	
+   	
     	
     	
     	
     	delayms(250);
+    	delayms(250);
+    	delayms(250);
+    	
     	    	
     }
 

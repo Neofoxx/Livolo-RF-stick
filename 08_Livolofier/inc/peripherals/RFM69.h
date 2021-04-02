@@ -140,7 +140,7 @@ void RFM69_SetCLKOUT(uint8_t val);
 // RegDataModul bits
 #define RFM69_RegDataModul_Bit_Shift_DataMode			(5)
 #define RFM69_RegDataModul_Bit_Shift_ModulationType		(3)
-#define RFM69_RegDataModul_Bit_Shift_ModulationShaping	(3)
+#define RFM69_RegDataModul_Bit_Shift_ModulationShaping	(0)
 #define RFM69_RegDataModul_Bit_Mask_DataMode			(0b11 << RFM69_RegDataModul_Bit_Shift_DataMode)
 #define RFM69_RegDataModul_Bit_Mask_ModulationType		(0b11 << RFM69_RegDataModul_Bit_Shift_ModulationType)
 #define RFM69_RegDataModul_Bit_Mask_ModulationShaping	(0b11 << RFM69_RegDataModul_Bit_Shift_ModulationShaping)

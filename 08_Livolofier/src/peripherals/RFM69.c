@@ -287,14 +287,12 @@ void RFM69_Init(){
 	// Nothing to setup in the packet engine
 	
 	
-	
 	RFM69_SetReg(RFM69_RegOpMode, 
 	((0b100 << RFM69_RegOpMode_Bit_Shift_Mode) & RFM69_RegOpMode_Bit_Mask_Mode) );		// RX mode
 	// Sequencer is ON (auto-walks thourgh STBY->FS->RX), Listen mode disabled, Listen abort disabled
 
-	
+
 	while(!(RFM69_ReadReg(RFM69_RegIrqFlags1) & RFM69_RegIrqFlags1_Bit_Mask_ModeReady)){
 	}
-	
 
 }

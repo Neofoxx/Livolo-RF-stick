@@ -5,18 +5,29 @@
 
 
 void LED_init(){
-	LEDUSER_TRISbits.LEDUSER_TRISPIN = 0;	// Set to output
+	LEDGREEN_TRISbits.LEDGREEN_TRISPIN = 0;	// Set to output
+	LEDRED_TRISbits.LEDRED_TRISPIN = 0;	// Set to output
 }
 
-void LED_setState(uint8_t state){
+void LED_setGreen(uint8_t state){
 	if (state){
-		LEDUSER_LATbits.LEDUSER_LATPIN = 1;
+		LEDGREEN_LATbits.LEDGREEN_LATPIN = 1;
 	}
 	else{
-		LEDUSER_LATbits.LEDUSER_LATPIN = 0;
+		LEDGREEN_LATbits.LEDGREEN_LATPIN = 0;
+	}
+}
+
+void LED_setRed(uint8_t state){
+	if (state){
+		LEDRED_LATbits.LEDRED_LATPIN = 1;
+	}
+	else{
+		LEDRED_LATbits.LEDRED_LATPIN = 0;
 	}
 }
 
 void LED_toggle(){
-	LEDUSER_LATINV = LEDUSER_MASK;
+	LEDGREEN_LATINV = LEDGREEN_MASK;
+	LEDRED_LATINV = LEDRED_MASK;
 }

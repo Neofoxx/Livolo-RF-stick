@@ -4,7 +4,7 @@
 #include <inttypes.h>
 
 // Blocking delays
-#define FCLK	48000000
+#define FCLK	24000000
 
 void delayus(uint32_t useconds);
 void delayms(uint32_t mseconds);

@@ -3,9 +3,10 @@
 #include <GPIODrv.h>
 
 void BTN_init(){
-	// One button on RC5, no analog function
-	BTNUSER_TRISbits.BTNUSER_TRISPIN = 1;					// Set as input
-	BTNUSER_PULLREG = BTNUSER_PULLREG | BTNUSER_PULLBIT;	// Enable pull-up (in this case)
+	// One button on RA3
+	BTN_ANSELbits.BTN_ANSELPIN = 0;
+	BTN_TRISbits.BTN_TRISPIN = 1;					// Set as input
+	BTN_PULLREG = BTN_PULLREG | BTN_PULLBIT;	// Enable pull-up (in this case)
 }
 
 void BTN_update(){
@@ -14,7 +15,7 @@ void BTN_update(){
 
 uint8_t BTN_getStatus(){
 	// Inverted logic - button pressed gives 0
-	if (BTNUSER_PORTbits.BTNUSER_PORTPIN){
+	if (BTN_PORTbits.BTN_PORTPIN){
 		return 0;
 	}
 	else{

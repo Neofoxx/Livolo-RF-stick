@@ -1,7 +1,6 @@
 #include <p32xxxx.h>
 #include <UARTDrv.h>
 #include <GPIODrv.h>
-#include <system.h>
 #include <inttypes.h>
 #include <interrupt.h>
 
@@ -23,55 +22,57 @@ uint8_t temp;
 // As defined in interrupt.h/c
 INTERRUPT(UART2Interrupt){
 	// Should check if TX or RX interrupt
-	count++;		// Increase counter, for our test
-	temp = U2RXREG;	// Readout data, otherwise we'll be stuck here
-	IFS1bits.U2RXIF = 0;	// Clear bits. TODO nicer.
+	//count++;		// Increase counter, for our test
+	//temp = UART_RX_reg;	// Readout data, otherwise we'll be stuck here
+	//IFS1bits.U2RXIF = 0;	// Clear bits. TODO nicer.
 }
 
 
 void UARTDrv_Init(uint32_t baud){
-	U2MODEbits.ON = 0;
+	UART_MODE_bits.ON = 0;
 
+	UART_TX_ANSELbits.UART_TX_ANSELPIN = 0;	// Disable analog functionality
 	UART_TX_TRISbits.UART_TX_TRISPIN = 0;	// 0 == output
 	UART_TX_LATbits.UART_TX_LATPIN = 1;		// Set high, as UART is Idle High
-	UART_TX_RP_REG = UART_TX_RP_VAL;		// Remap to proper pin
+	UART_TX_REMAP_BITS.UART_TX_REMAP_SUB = UART_TX_REMAP_VAL;		// Remap to proper pin
 
+	UART_RX_ANSELbits.UART_RX_ANSELPIN = 0;	// Disable analog functionality
 	UART_RX_TRISbits.UART_TX_TRISPIN = 1;						// 1 == input
-	UART_RX_PULLREG = UART_RX_PULLREG | UART_RX_PULLBIT;	// Enable pull-up
-	U2RXR = UART_RX_REMAP_VAL;									// Set to which pin
+	UART_RX_PULLREG = UART_RX_PULLREG | UART_RX_PULLBIT;		// Enable pull-up
+	UART_RX_REMAP_BITS.UART_RX_REMAP_SUB = UART_RX_REMAP_VAL;	// Set to which pin
 
-	U2MODEbits.SIDL = 0;	// Stop when in IDLE mode
-	U2MODEbits.IREN	= 0;	// Disable IrDA
-	U2MODEbits.RTSMD = 0;	// Don't care, RTS not used
-	U2MODEbits.UEN = 0;		// TX & RX controlled by UART peripheral, RTC & CTS are not.
-	U2MODEbits.WAKE = 0;	// Don't wake up from sleep
-	U2MODEbits.LPBACK = 0;	// Loopback mode disabled
-	U2MODEbits.ABAUD = 0;	// No autobauding
-	U2MODEbits.RXINV = 0;	// Idle HIGH
-	U2MODEbits.BRGH = 0;	// Standard speed mode - 16x baud clock
-	U2MODEbits.PDSEL = 0;	// 8 bits, no parity
-	U2MODEbits.STSEL = 0;	// 1 stop bit
+	UART_MODE_bits.SIDL = 0;	// Stop when in IDLE mode
+	UART_MODE_bits.IREN	= 0;	// Disable IrDA
+	UART_MODE_bits.RTSMD = 0;	// Don't care, RTS not used
+	UART_MODE_bits.UEN = 0;		// TX & RX controlled by UART peripheral, RTC & CTS are not.
+	UART_MODE_bits.WAKE = 0;	// Don't wake up from sleep
+	UART_MODE_bits.LPBACK = 0;	// Loopback mode disabled
+	UART_MODE_bits.ABAUD = 0;	// No autobauding
+	UART_MODE_bits.RXINV = 0;	// Idle HIGH
+	UART_MODE_bits.BRGH = 0;	// Standard speed mode - 16x baud clock
+	UART_MODE_bits.PDSEL = 0;	// 8 bits, no parity
+	UART_MODE_bits.STSEL = 0;	// 1 stop bit
 
-	U2STAbits.ADM_EN = 0;	// Don't care for auto address detection, unused
-	U2STAbits.ADDR = 0;		// Don't care for auto address mark
-	U2STAbits.UTXISEL = 00;	// Generate interrupt, when at least one space available (unused)
-	U2STAbits.UTXINV = 0;	// Idle HIGH
-	U2STAbits.URXEN = 1;	// UART receiver pin enabled
-	U2STAbits.UTXBRK = 0;	// Don't send breaks.
-	U2STAbits.UTXEN = 1;	// Uart transmitter pin enabled
-	U2STAbits.URXISEL = 0;	// Interrupt what receiver buffer not empty
-	U2STAbits.ADDEN = 0;	// Address detect mode disabled (unused)
-	U2STAbits.OERR = 0;		// Clear RX Overrun bit - not important at this point
+	UART_STA_bits.MASK = 0;		// Don't care for auto address detection, unused
+	UART_STA_bits.ADDR = 0;		// Don't care for auto address mark
+	UART_STA_bits.UTXISEL = 00;	// Generate interrupt, when at least one space available (unused)
+	UART_STA_bits.UTXINV = 0;	// Idle HIGH
+	UART_STA_bits.URXEN = 1;	// UART receiver pin enabled
+	UART_STA_bits.UTXBRK = 0;	// Don't send breaks.
+	UART_STA_bits.UTXEN = 1;	// Uart transmitter pin enabled
+	UART_STA_bits.URXISEL = 0;	// Interrupt what receiver buffer not empty
+	UART_STA_bits.ADDEN = 0;	// Address detect mode disabled (unused)
+	UART_STA_bits.OERR = 0;		// Clear RX Overrun bit - not important at this point
 
 	// (PBCLK/BRGH?4:16)/BAUD - 1
-	U2BRG = (GetPeripheralClock() / (U2MODEbits.BRGH ? 4 : 16)) / baud - 1;
+	UART_BRG_reg = (24000000 / (U2MODEbits.BRGH ? 4 : 16)) / baud - 1;
 
 	// New - setup interrupt
-	IPC9bits.U2IP = 1;		// Priorty = 1 (one above disabled)
-	IPC9bits.U2IS = 0;		// Subpriority = 0 (least)
-	IEC1bits.U2RXIE = 1;	// Enable interrupt
+	//IPC9bits.U2IP = 1;		// Priorty = 1 (one above disabled)
+	//IPC9bits.U2IS = 0;		// Subpriority = 0 (least)
+	//IEC1bits.U2RXIE = 1;	// Enable interrupt
 
-	U2MODEbits.ON = 1;
+	UART_MODE_bits.ON = 1;
 }
 
 void UARTDrv_SendBlocking(uint8_t * buffer, uint32_t length){
@@ -79,8 +80,8 @@ void UARTDrv_SendBlocking(uint8_t * buffer, uint32_t length){
 	uint32_t counter = 0;
 
 	for (counter = 0; counter<length; counter++){
-		while(U2STAbits.UTXBF){ asm("nop"); }
-		U2TXREG = buffer[counter];
+		while(UART_STA_bits.UTXBF){ asm("nop"); }
+		UART_TX_reg = buffer[counter];
 	}
 
 	// Wait until sent
