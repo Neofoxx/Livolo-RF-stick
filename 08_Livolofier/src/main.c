@@ -270,6 +270,20 @@ void tryCapture(int16_t time, int16_t minRssi){
 								dataCounter++;
 							}
 						}
+						else if (dataCounter == 22){
+							// When _we_ transmit, the last bit can be a bit longer...
+							// We can asume that it is a 0, if shortCounter == 1, else assume 1
+							if (shortCounter == 1){
+								shortCounter = 0;
+								data = (data << 1);
+								dataCounter++;
+							}
+							else{
+								data = (data << 1) | 1;
+								shortCounter = 0;
+								dataCounter++;
+							}
+						}
 						else{
 							// Invalid data.
 							preambleFound = false;
@@ -298,7 +312,7 @@ void tryCapture(int16_t time, int16_t minRssi){
 			}
 
 			if (done){			
-				uint16_t remote = (data >> 8) & 0xFFFF;
+				uint16_t remote = (data >> 7) & 0xFFFF;
 				uint8_t keycode = data & 0x7F;
 				//lengthArray = sprintf(tempArray, "Bit val %d, length %d\n", prevBit, currBitCounter);
 				lengthArray = sprintf(tempArray, "RemoteID %d, KeycodeID %d\n", remote, keycode);
@@ -401,7 +415,7 @@ void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
 	}
 	
 	for (counter = 0; counter < 7; counter++){
-		if (keycode & (1<<(7-counter))){
+		if (keycode & (1<<(6-counter))){
 			for (counterInner = 0; counterInner < (LIVOLO_ONE_LEN_MIN + LIVOLO_ONE_LEN_MAX) / 2; counterInner++){
 				outData[lenData] = outData[lenData] | (nextVal<<bitPos);
 				bitPos--;
@@ -448,19 +462,11 @@ void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
 	// We could also... copy the last sent byte to the _end_ of the array. And rotate. Coyote laying the tracks style
 	// 'cos you gotta know, the original remote is fucky. Sometimes it drops a bit at the end, so I suspect fimilar fuckery.
 	
-	/*
-	for (counterInner = 0; counterInner < (LIVOLO_ONE_LEN_MIN + LIVOLO_ONE_LEN_MAX) / 2; counterInner++){
-		outData[lenData] = outData[lenData] | (nextVal<<bitPos);
-		bitPos--;
-		if (bitPos > 7){
-			lenData++;
-			bitPos = 7;
-		}
-	}
+	// So, turns out, that the Livolo switches __really__ need that next edge to latch on to.
+	// Without it (say another zero half period), it doesn't budge. So no period, or prolonged last bit == no bueno.
+	// This sucks. It also means we'll have to use a more simple TX-ing mechanism with timed delays.
 	
-	nextVal = (nextVal + 1) & 0x01;
-	*/
-	
+/*	
 	// Done.
 	
 	
@@ -484,24 +490,85 @@ void sendPacket(uint16_t id, uint8_t keycode, uint16_t numTimes){
 	
 	SPIDrv_Init(57142, 1, 0, 0, SPI_MODE_TX_OTHER_SDO);
 	
-/*
+
 	// We will write 1B more - it's just 0s anyway
 	for (counter = 0; counter < numTimes; counter++){		
 		SPIDrv_SendBlocking(outData, lenData + 1);
 	}
-*/
 
-	for (counter = 0; counter < numTimes; counter++){	
-		// If we have nicely algined data, just send, no fuckery needed
-		if (bitPos == 7){
-			SPIDrv_SendBlocking(outData, lenData);
-		}
-		else{
-			SPIDrv_SendBlocking(outData, lenData + 	1);	// Ne da se mi.
-		}
+
+	SPIDrv_Init(1000000, 1, 0, 0, SPI_MODE_NORMAL);		// Revert back to normal
+	RFM69_SetReg(RFM69_RegOpMode, temp);
+	while(!(RFM69_ReadReg(RFM69_RegIrqFlags1) & RFM69_RegIrqFlags1_Bit_Mask_ModeReady)){
 	}
 	
-	SPIDrv_Init(1000000, 1, 0, 0, SPI_MODE_NORMAL);		// Revert back to normal
+*/	
+
+	uint32_t combinedData = (uint32_t)(keycode & 0x7F) | (((uint32_t)(id)) << 7);
+	
+	uint32_t startTime;
+	uint32_t uSecondTicks = ((uint64_t)FCLK/(uint64_t)2) / 1000000;
+	uint32_t countPreamble = uSecondTicks * 560;	// Preamble is a nominal 560us high
+	uint32_t countHigh = uSecondTicks * 325;	// High is a nominal 325us high (could also be 315us, or 330us)
+	uint32_t countLow = uSecondTicks * 157;		// Low is a nominal 2 * 157us low
+	nextVal = 0;
+		
+
+	uint8_t temp = RFM69_ReadReg(RFM69_RegOpMode);
+	RFM69_SetReg(RFM69_RegOpMode, ((0b011 << RFM69_RegOpMode_Bit_Shift_Mode) & RFM69_RegOpMode_Bit_Mask_Mode) );		// Switch to TX mode, automatically.
+	
+	while(!(RFM69_ReadReg(RFM69_RegIrqFlags1) & RFM69_RegIrqFlags1_Bit_Mask_ModeReady)){
+	}
+	
+	GPIODrv_initSpecialPin(GPIO_MODE_OUTPUT);
+	
+	// TX here	
+	for (counter = 0; counter < numTimes; counter++){
+		// Set pin
+		GPIODrv_setSpecialPin(true);	
+		// Wait
+		startTime = _CP0_GET_COUNT();
+		while ((_CP0_GET_COUNT() - startTime) < countPreamble){
+		}
+		
+		nextVal = 0;
+	
+		for (counterInner = 0; counterInner < 23; counterInner++){
+			if (combinedData & (1<<(22-counterInner))){
+				// Set pin
+				GPIODrv_setSpecialPin(nextVal);
+				
+				nextVal = (nextVal + 1) & 0x01;
+				// Wait
+				startTime = _CP0_GET_COUNT();
+				while ((_CP0_GET_COUNT() - startTime) < countHigh){
+				}
+			}
+			else{
+				// Set pin
+				GPIODrv_setSpecialPin(nextVal);
+				
+				nextVal = (nextVal + 1) & 0x01;
+				
+				startTime = _CP0_GET_COUNT();
+				while ((_CP0_GET_COUNT() - startTime) < countLow){
+				}
+				
+				// Set pin
+				GPIODrv_setSpecialPin(nextVal);
+				
+				nextVal = (nextVal + 1) & 0x01;
+				
+				startTime = _CP0_GET_COUNT();
+				while ((_CP0_GET_COUNT() - startTime) < countLow){
+				}
+			}		
+		}
+	
+	}
+	
+	GPIODrv_initSpecialPin(GPIO_MODE_INPUT);
+	
 	RFM69_SetReg(RFM69_RegOpMode, temp);
 	while(!(RFM69_ReadReg(RFM69_RegIrqFlags1) & RFM69_RegIrqFlags1_Bit_Mask_ModeReady)){
 	}
@@ -549,7 +616,7 @@ void printDebug(){
 	lengthArray = sprintf(tempArray, "Temperature raw is %d, probably around %d°C\n", temp, 170-temp);
 	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
 	
-	lengthArray = sprintf(tempArray, "Button status: %d", BTN_getStatus());
+	lengthArray = sprintf(tempArray, "Button status: %d\n", BTN_getStatus());
 	UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);	
 }
 
@@ -607,6 +674,15 @@ int main(){
     	}
     	
     	else if (0 == strcmp(command, "TRANSMIT")){
+    		// Minimum number of transmits for "on/off" should be ~30. Use 50. Don't use more than 100, or it'll turn itself off :D
+    		// For "dim up", 20 seems to be a minimum. There is a limit to the discretization the switch does
+    		
+    		// For pairing, use 30. More than that and it'll unpair itself :p
+    		// -> While the manual doesn't says this, on the remote, if you start synchronization (one "Dit"),
+    		// -> Then press a buttons (second "Dit"), this synchronizes/binds the button the the dwitch
+    		// -> If you press a button _again_ (THIRD "Dit"), it will unpair/unbind it!
+    		// -> Hende why a 50 here will cause trouble. Fun tho, and you don't have to unlearn everything.
+    	
     		sscanf(myBuffer, "%16s %ld %ld %ld", command, &operands[0], &operands[1], &operands[2]);
     		if (operands[0] < 0 || operands[0] >= 65535			// Remote id is 16-bit
     			|| operands[1] < 0 || operands[1] >= 127		// Keycode is 7-bit
@@ -624,6 +700,43 @@ int main(){
     	
     	else if (0 == strcmp(command, "SCAN")){
     		rssiSniffer();	// Fixed frequencies is fine for now.
+    	}
+    	
+    	else if (0 == strcmp(command, "HELP")){
+    		lengthArray = sprintf(tempArray, "RF stick, for controlling Livolo switches\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			
+			lengthArray = sprintf(tempArray, "Commands:\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			
+			lengthArray = sprintf(tempArray, "HELP - Print this help\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			
+			lengthArray = sprintf(tempArray, "SCAN - Perform an RSSI scan of a wider area\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			
+			lengthArray = sprintf(tempArray, "DEBUG - Print out some diagnostic data\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			
+			lengthArray = sprintf(tempArray, "SNIFF [Minimum RSSI] [Timeout] - Sniff for Livolo packets.\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			lengthArray = sprintf(tempArray, "-> RSSI should be [-115 to 0]. In practice, use -80, maybe -90 for really weak signals\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			lengthArray = sprintf(tempArray, "-> Timeout is in miliseconds. You can put 0 for no timeout. You can always end by sending \\n\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			
+			lengthArray = sprintf(tempArray, "TRANSMIT [Remote ID] [Keycode] [Number of repeats] - Send a packet many times\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			lengthArray = sprintf(tempArray, "-> Remote ID is a 16-bit unsigned number\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			lengthArray = sprintf(tempArray, "-> Keycode is a 6-bit unsigned number\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			lengthArray = sprintf(tempArray, "-> Number of packets can be [1 to 1000]. Each one takes 8ms, fyi.\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			lengthArray = sprintf(tempArray, "----> THIS DOES NOT VERIFY IF YOU DATA IS CORRECT. YOU HAVE TO MAKE SURE THAT YOU HAVE THE RIGHT NUMBER OF 1s!\n");
+			UARTDrv_SendBlocking((uint8_t *) tempArray, lengthArray);
+			
+			
     	}
     	    
 

@@ -259,6 +259,7 @@ void RFM69_Init(){
 	// Don't need The Listen registers
 	
 	RFM69_SetOutputPower(0);	// Set output pwer to 0dBm
+	//RFM69_SetOutputPower(13);	// Set output pwer to 0dBm
 	
 	// Don't need to set PA ramp - only for FSK
 	

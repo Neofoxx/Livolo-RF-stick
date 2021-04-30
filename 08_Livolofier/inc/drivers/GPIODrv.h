@@ -1,6 +1,15 @@
 #ifndef GPIODRV_H_573f2ca8b43e44209acc90f0f9b7de5d
 #define GPIODRV_H_573f2ca8b43e44209acc90f0f9b7de5d
 
+#include <inttypes.h>
+#include <stdbool.h>
+
+#define GPIO_MODE_OUTPUT 	0
+#define GPIO_MODE_INPUT 	1
+#define GPIO_MODE_HIZ 		2
+
+
+
 // LED - RED
 #define LEDRED_TRISbits		TRISBbits
 #define LEDRED_TRISPIN		TRISB4
@@ -131,5 +140,7 @@
 #define RFM_RESET_ANSELbits		ANSELBbits
 #define RFM_RESET_ANSELPIN		ANSB2
 
+void GPIODrv_initSpecialPin(uint32_t mode);
+void GPIODrv_setSpecialPin(bool state);
 
 #endif
